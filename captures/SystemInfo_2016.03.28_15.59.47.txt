@@ -1,0 +1,106 @@
+TASK com.znt.estate id=1334
+  ACTIVITY com.znt.estate/com.uestc.ui.activity.HomeActivity 3b08a60a pid=8361
+    Local Activity 154bed7d State:
+      mResumed=true mStopped=false mFinished=false
+      mLoadersStarted=true
+      mChangingConfigurations=false
+      mCurrentConfig={0 1.42 460mcc3mnc zh_CN ldltr sw360dp w360dp h615dp 480dpi nrml long port finger -keyb/v/h -nav/h s.17}
+      mMultiWindowStyle=MultiWindowStyle{type=0, zone=ZONE_UNKNOWN, option=0x00000000, bounds=null, isNull=false, isolatedCenterPoint=Point(0, 0), scale=0.0, specificTaskId=-1}
+    Active Fragments in 22656873:
+      #0: CycleViewPager{6f2b330 #0 id=0x7f0c005e}
+        mFragmentId=#7f0c005e mContainerId=#ffffffff mTag=null
+        mState=5 mIndex=0 mWho=android:fragment:0 mBackStackNesting=0
+        mAdded=true mRemoving=false mResumed=true mFromLayout=true mInLayout=true
+        mHidden=false mDetached=false mMenuVisible=true mHasMenu=false
+        mRetainInstance=false mRetaining=false mUserVisibleHint=true
+        mFragmentManager=FragmentManager{22656873 in HomeActivity{154bed7d}}
+        mActivity=com.uestc.ui.activity.HomeActivity@154bed7d
+        mView=android.widget.FrameLayout{2f0f1ba9 V.E..... ........ 0,156-1080,744 #7f0c005e app:id/fragment_cycle_viewpager_content}
+      #1: HighVersionFragment{3192752e #1 id=0x7f0c0068}
+        mFragmentId=#7f0c0068 mContainerId=#7f0c0068 mTag=null
+        mState=5 mIndex=1 mWho=android:fragment:1 mBackStackNesting=0
+        mAdded=true mRemoving=false mResumed=true mFromLayout=false mInLayout=false
+        mHidden=false mDetached=false mMenuVisible=true mHasMenu=false
+        mRetainInstance=false mRetaining=false mUserVisibleHint=true
+        mFragmentManager=FragmentManager{22656873 in HomeActivity{154bed7d}}
+        mActivity=com.uestc.ui.activity.HomeActivity@154bed7d
+        mContainer=android.widget.RelativeLayout{aa418cf V.E..... ........ 0,894-1080,1655 #7f0c0068 app:id/ifragement}
+        mView=android.widget.RelativeLayout{687d25c V.E..... ........ 0,0-1080,761}
+    Added Fragments:
+      #0: CycleViewPager{6f2b330 #0 id=0x7f0c005e}
+      #1: HighVersionFragment{3192752e #1 id=0x7f0c0068}
+    FragmentManager misc state:
+      mActivity=com.uestc.ui.activity.HomeActivity@154bed7d
+      mContainer=android.app.Activity$1@3914c965
+      mCurState=5 mStateSaved=false mDestroyed=false
+    ViewRoot:
+      mAdded=true mRemoved=false
+      mConsumeBatchedInputScheduled=false
+      mConsumeBatchedInputImmediatelyScheduled=false
+      mPendingInputEventCount=0
+      mProcessInputEventsScheduled=false
+      mTraversalScheduled=false
+      android.view.ViewRootImpl$NativePreImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$ImeInputStage: mQueueLength=0
+      android.view.ViewRootImpl$NativePostImeInputStage: mQueueLength=0
+    Choreographer:
+      mFrameScheduled=false
+      mLastFrameTime=189780249 (4989 ms ago)
+    View Hierarchy:
+      com.android.internal.policy.impl.PhoneWindow$DecorView{c54b63a V.E..... R....... 0,0-1080,1920}
+        android.widget.LinearLayout{3a7372eb V.E..... ........ 0,0-1080,1920}
+          android.view.ViewStub{1cedb848 G.E..... ......I. 0,0-0,0 #102043a}
+          android.widget.FrameLayout{f0d96e1 V.ED.... ........ 0,75-1080,1920 #1020002 android:id/content}
+            android.widget.RelativeLayout{1fc7fc06 V.E..... ........ 0,0-1080,1845}
+              android.widget.RelativeLayout{299452c7 V.E..... ........ 0,0-1080,156 #7f0c005c app:id/rl_title_homeactivity}
+                android.widget.ImageView{324a10f4 V.ED.... ........ 0,0-1080,156 #7f0c005d app:id/iv_verpass1_homeactivity}
+              android.widget.FrameLayout{2f0f1ba9 V.E..... ........ 0,156-1080,744 #7f0c005e app:id/fragment_cycle_viewpager_content}
+                android.widget.RelativeLayout{b6bc01d V.E..... ........ 0,0-1080,588}
+                  com.uestc.ui.view.viewpager.BaseViewPager{24d7d292 VFED.... ........ 0,0-1080,588 #7f0c0196 app:id/viewPager}
+                    android.widget.ImageView{3c145010 V.ED..C. ........ 0,0-1080,588}
+                    android.widget.ImageView{3a7a8d0e V.ED..C. ........ 1080,0-2160,588}
+                    android.widget.ImageView{1f162ac5 V.ED..C. ........ 2160,0-3240,588}
+                    android.widget.ImageView{b4a1128 V.ED..C. ........ 3240,0-4320,588}
+                    android.widget.ImageView{2df6270d V.ED..C. ......ID -1080,0-0,588}
+                  android.widget.LinearLayout{20f95463 V.E..... ........ 495,552-585,588 #7f0c0197 app:id/layout_viewpager_indicator}
+                    android.widget.LinearLayout{29714860 V.E..... ........ 0,0-24,18}
+                      android.widget.ImageView{3894119 V.ED.... ........ 0,0-24,18 #7f0c0198 app:id/image_indicator}
+                    android.widget.LinearLayout{59c85de V.E..... ........ 24,0-48,18}
+                      android.widget.ImageView{3c22d3bf V.ED.... ........ 0,0-24,18 #7f0c0198 app:id/image_indicator}
+                    android.widget.LinearLayout{3c128a8c V.E..... ........ 48,0-72,18}
+                      android.widget.ImageView{2e63d5d5 V.ED.... ........ 0,0-24,18 #7f0c0198 app:id/image_indicator}
+              android.widget.LinearLayout{236721ea V.E..... ........ 0,744-1080,894 #7f0c005f app:id/ll_announcement_homeactivity}
+                android.widget.ImageView{243aecdb V.ED.... ........ 0,0-15,150}
+                android.widget.ImageView{2da3c378 V.ED.... ........ 45,30-135,120 #7f0c0060 app:id/iv_announcementrl_homeactivity}
+                android.widget.TextView{3b18fa51 V.ED..C. ........ 165,32-897,118 #7f0c0061 app:id/tv_first_announcementrl_homeactivity}
+                android.widget.RelativeLayout{318d72b6 V.E..... ........ 897,15-1080,135 #7f0c0062 app:id/rl_more_homeactivity}
+                  android.widget.ImageButton{20f17bb7 VFED..C. ........ 61,0-121,120 #7f0c0063 app:id/ib_more_homeactivity}
+              android.widget.RadioGroup{10d9f24 V.E..... ........ 0,1655-1080,1845 #7f0c0064 app:id/radioGroup_homeactivity}
+                android.widget.RadioButton{1321ea8d VFED..C. ........ 0,4-540,185 #7f0c0065 app:id/rb_home_homeactivity}
+                android.widget.RadioButton{30f60442 VFED..C. ........ 540,0-1080,190 #7f0c0066 app:id/rb_me_homeactivity}
+              android.widget.ImageView{1b181c53 V.ED.... ........ 0,1652-1080,1655}
+              android.view.View{1d178990 V.ED.... ........ 0,1652-1080,1655 #7f0c0067 app:id/line}
+              android.widget.RelativeLayout{aa418cf V.E..... ........ 0,894-1080,1655 #7f0c0068 app:id/ifragement}
+                android.widget.RelativeLayout{687d25c V.E..... ........ 0,0-1080,761}
+                  android.widget.LinearLayout{44fa289 V.E..... ........ 0,0-1080,660}
+                    android.widget.LinearLayout{1864228e V.E..... ........ 0,30-1080,330}
+                      android.widget.LinearLayout{2cfe2aaf V.E...C. ........ 0,0-1077,300 #7f0c013d app:id/ib_open_park_high_open}
+                        android.widget.LinearLayout{b93aebc V.E..... ........ 336,97-741,202}
+                          android.widget.ImageView{e86de45 V.ED.... ........ 48,0-153,105}
+                          android.widget.TextView{3583d99a V.ED.... ........ 177,12-405,93}
+                    android.widget.LinearLayout{1c8cc2cb V.E..... ........ 0,360-1080,660}
+                      android.widget.LinearLayout{3f4afaa8 V.E...C. ........ 0,0-354,300 #7f0c013e app:id/ib_complain_housekeeper}
+                        android.widget.ImageView{113c19c1 V.ED.... ........ 48,120-108,180}
+                        android.widget.LinearLayout{12b5f566 V.E..... ........ 132,74-354,226}
+                          android.widget.TextView{1b22c0a7 V.ED.... ........ 0,0-222,152}
+                      android.widget.LinearLayout{ca91954 V.E...C. ........ 363,0-717,300 #7f0c013f app:id/ib_replair_housekeeper}
+                        android.widget.ImageView{14af90fd V.ED.... ........ 48,120-108,180}
+                        android.widget.LinearLayout{2d9c01f2 V.E..... ........ 132,74-354,226}
+                          android.widget.TextView{2730c043 V.ED.... ........ 0,0-222,152}
+                      android.widget.LinearLayout{12876c0 V.E...C. ........ 726,0-1080,300 #7f0c0140 app:id/ib_pay_housekeeper}
+                        android.widget.ImageView{2ae93ff9 V.ED.... ........ 48,120-108,180}
+                        android.widget.LinearLayout{a644b3e V.E..... ........ 132,74-354,226}
+                          android.widget.TextView{2b951d9f V.ED.... ........ 0,0-222,152}
+    Looper (main, tid 1) {57e3eec}
+      Message 0: { when=+779ms callback=com.uestc.ui.view.viewpager.CycleViewPager$2 target=com.uestc.ui.view.viewpager.CycleViewPager$1 }
+      (Total messages: 1, idling=false, quitting=false)

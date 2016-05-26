@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/write"
+    android:orientation="horizontal" >
+
+
+    <RelativeLayout
+        android:id="@+id/rl_status_item_myrepair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingRight="12dp"
+        android:layout_centerVertical="true">
+
+        <!--状态图片-->
+        <ImageView
+            android:id="@+id/iv_status_item_myrepair"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:scaleType="fitCenter" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_content_item_myrepair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/rl_status_item_myrepair">
+
+        <!--标题-->
+        <TextView
+            android:id="@+id/tv_title_item_myrepair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:maxEms="9"
+            android:singleLine="true"
+            android:text="下水道坏了"
+            android:textColor="#333333"
+            android:textSize="20sp" />
+
+        <!--状态文字-->
+        <TextView
+            android:id="@+id/tv_status_item_myrepair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:singleLine="true"
+            android:text="待处理"
+            android:textColor="@color/style"
+            android:textSize="18sp" />
+
+
+        <!--分割线-->
+        <ImageView
+            android:id="@+id/spilt_line"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_title_item_myrepair"
+            android:src="@color/style" />
+
+        <!--正文-->
+        <TextView
+            android:id="@+id/tv_descriptiontv_item_myrepair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spilt_line"
+            android:padding="5dp"
+            android:layout_marginTop="5dp"
+            android:maxEms="11"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="下水道坏了，排水排不下去。"
+            android:textColor="#333333"
+            android:textSize="17sp" />
+
+
+        <!--<Button-->
+            <!--android:id="@+id/add_review"-->
+            <!--android:layout_width="90dp"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:background="@drawable/square_button"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:text="添加评价"/>-->
+
+        <!--<Button-->
+            <!--android:id="@+id/delete_record"-->
+            <!--android:layout_width="90dp"-->
+            <!--android:layout_height="35dp"-->
+            <!--android:background="@drawable/square_button"-->
+            <!--android:layout_toRightOf="@id/add_review"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:text="删除记录"/>-->
+
+        <!--时间-->
+        <TextView
+            android:id="@+id/tv_time_item_myrepair"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spilt_line"
+            android:padding="2dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="7dp"
+            android:text="2011-10-30"
+            android:textColor="@color/gray1"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

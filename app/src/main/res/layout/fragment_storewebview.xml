@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/storewebview_parent">
+
+    <com.handmark.pulltorefresh.library.PullToRefreshWebView
+    android:id="@+id/pull_to_refresh_webview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    </com.handmark.pulltorefresh.library.PullToRefreshWebView>
+
+
+    <!--<android.support.v4.widget.SwipeRefreshLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:id="@+id/refreshable_view">-->
+
+        <!--<WebView-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:id="@+id/webview_info"-->
+            <!--android:scrollbars="vertical">-->
+
+        <!--</WebView>-->
+    <!--</android.support.v4.widget.SwipeRefreshLayout>-->
+</LinearLayout>

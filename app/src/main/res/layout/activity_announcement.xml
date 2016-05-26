@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+	<!-- 标题栏&返回键 -->
+    <RelativeLayout
+        android:id="@+id/rl_title_announcement"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/write" >
+        
+        <ImageButton 
+            android:id="@+id/btn_back_announcement"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:background="@color/write"
+            android:scaleType="fitCenter"
+            android:src="@drawable/goback1"/>
+
+        <TextView
+            android:id="@+id/tv_title_announcement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/notice"
+            android:textColor="@color/style"
+            android:textSize="18sp" 
+            android:maxEms="10" 
+            android:singleLine="true"
+            android:ellipsize="end"/>
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webview_announcement"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        />
+
+</LinearLayout>

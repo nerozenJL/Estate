@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/write">
+
+    <!-- 标题栏&返回图片 -->
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/write" >
+
+        <ImageButton
+            android:id="@+id/me2_back"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:background="@color/write"
+            android:scaleType="fitCenter"
+            android:src="@drawable/goback1" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_horizontal"
+            android:text="@string/individual_setting"
+            android:textColor="@color/style"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/call_us2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/call_us"
+            android:padding="14dp"
+            android:textSize="15sp"
+            android:textColor="@color/style"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:src="@color/style" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/me"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_title"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical" >
+
+        <!--个人资料-->
+        <RelativeLayout
+            android:id="@+id/me2_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_profile_me2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:scaleType="fitCenter"
+                android:layout_margin="10dp"
+                android:src="@drawable/data" />
+
+            <TextView
+                android:id="@+id/tv_profile_me2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_profile_me2"
+                android:gravity="center"
+                android:text="@string/profile"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/iv_profile_me2"
+                android:layout_below="@id/tv_profile_me2"
+                android:text="@string/change_profile"
+                android:textColor="@color/black1"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/go" />
+            
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="3dp"
+                android:layout_below="@id/iv_profile_me2"
+                android:src="@color/style" />
+        </RelativeLayout>
+
+        <!--修改密码-->
+        <RelativeLayout
+            android:id="@+id/me2_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_change_pass_me2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:scaleType="fitCenter"
+                android:layout_margin="10dp"
+                android:src="@drawable/resetpassword" />
+
+            <TextView
+                android:id="@+id/tv_change_pass_me2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_change_pass_me2"
+                android:gravity="center"
+                android:text="@string/change_password"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/iv_change_pass_me2"
+                android:layout_below="@id/tv_change_pass_me2"
+                android:text="@string/change_password"
+                android:textColor="@color/black1"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/go" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="3dp"
+                android:layout_below="@id/iv_change_pass_me2"
+                android:src="@color/style" />
+        </RelativeLayout>
+        
+        <!--我的物业-->
+        <RelativeLayout
+            android:id="@+id/me2_layout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_my_property_me2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:scaleType="fitCenter"
+                android:layout_margin="10dp"
+                android:src="@drawable/mypropretyt" />
+
+            <TextView
+                android:id="@+id/tv_my_property_me2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_my_property_me2"
+                android:gravity="center"
+                android:text="@string/my_property"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/iv_my_property_me2"
+                android:layout_below="@id/tv_my_property_me2"
+                android:text="@string/check_property_under_my_name"
+                android:textColor="@color/black1"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/go" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="3dp"
+                android:layout_below="@id/iv_my_property_me2"
+                android:src="@color/style" />
+        </RelativeLayout>
+
+        <!--物业绑定查看-->
+        <RelativeLayout
+            android:id="@+id/me2_layout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_check_my_property_me2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:scaleType="fitCenter"
+                android:layout_margin="10dp"
+                android:src="@drawable/mypropretyt" />
+
+            <TextView
+                android:id="@+id/tv_check_my_property_me2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_check_my_property_me2"
+                android:gravity="center"
+                android:text="@string/check_property_binding"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/iv_check_my_property_me2"
+                android:layout_below="@id/tv_check_my_property_me2"
+                android:text="@string/check_person_under_binding"
+                android:textColor="@color/black1"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/go" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="3dp"
+                android:layout_below="@id/iv_check_my_property_me2"
+                android:src="@color/style" />
+        </RelativeLayout>
+
+        <!--物业绑定审核-->
+        <RelativeLayout
+            android:id="@+id/me2_layout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_examine_my_property_me2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:scaleType="fitCenter"
+                android:layout_margin="10dp"
+                android:src="@drawable/data" />
+
+            <TextView
+                android:id="@+id/tv_examine_my_property_me2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_examine_my_property_me2"
+                android:gravity="center"
+                android:text="@string/examine_property_binding"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/iv_examine_my_property_me2"
+                android:layout_below="@id/tv_examine_my_property_me2"
+                android:text="@string/examine_property_binding_request"
+                android:textColor="@color/black1"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/go" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="3dp"
+                android:layout_below="@id/iv_examine_my_property_me2"
+                android:src="@color/style" />
+        </RelativeLayout>
+
+        <!--手机开门设置-->
+        <RelativeLayout
+            android:id="@+id/me2_layout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_open_door_me2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:scaleType="fitCenter"
+                android:layout_margin="10dp"
+                android:src="@drawable/opendoor_way" />
+
+            <TextView
+                android:id="@+id/tv_open_door_me2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_open_door_me2"
+                android:gravity="center"
+                android:text="@string/opendoorway"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/iv_open_door_me2"
+                android:layout_below="@id/tv_open_door_me2"
+                android:text="@string/default_opendoorway"
+                android:textColor="@color/black1"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/go" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="3dp"
+                android:layout_below="@id/iv_open_door_me2"
+                android:src="@color/style" />
+        </RelativeLayout>
+
+        <!--退出账户-->
+        <RelativeLayout
+            android:id="@+id/me2_layout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/iv_exit_me2"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:scaleType="fitCenter"
+                android:layout_margin="10dp"
+                android:src="@drawable/exit" />
+
+            <TextView
+                android:id="@+id/tv_exit_me2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="2dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_exit_me2"
+                android:gravity="center"
+                android:text="@string/exit_account"
+                android:textColor="#000000"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/iv_exit_me2"
+                android:layout_below="@id/tv_exit_me2"
+                android:text="@string/re_login"
+                android:textColor="@color/black1"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="fitCenter"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/go" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="3dp"
+                android:layout_below="@id/iv_exit_me2"
+                android:src="@color/style" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    
+
+
+
+</LinearLayout>

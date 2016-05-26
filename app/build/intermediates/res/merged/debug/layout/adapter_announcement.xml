@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:gravity="center_vertical">
+
+    
+        
+    <ImageView
+        android:id="@+id/im_sqare_adapter_announcement"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/sqare"
+        android:layout_marginTop="15dp"
+        />
+    
+    
+    <TextView
+        android:id="@+id/tv_title_adapter_announcement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/im_sqare_adapter_announcement"
+        android:maxEms="35" 
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textSize="18sp"
+        android:gravity="center_vertical"
+        android:text="test"/>
+
+    <ImageView 
+        android:id="@+id/im_enter_adapter_announcement"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="12dp"
+        android:gravity="center_vertical"
+        android:src="@drawable/enter"
+        />
+    
+    <ImageView
+		 android:id="@+id/im_spilt_line_adapter_announcement"
+         android:layout_width="match_parent"
+         android:layout_height="1dp"
+         android:scaleType="fitXY"
+         android:layout_alignParentRight="true"
+         android:layout_alignParentBottom="true"
+         android:layout_toRightOf="@id/im_sqare_adapter_announcement"
+         android:layout_below="@id/title"
+         android:src="@drawable/spilt_line_vertical"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_vertical"
+    android:orientation="vertical"
+    android:background="@drawable/shapeline">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="50dp"
+        >
+        <LinearLayout
+            android:id="@+id/ll_bind_layout0_item_owner_review"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+            <!-- 手机号 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/phone"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_phone_item_owner_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:text="test"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bind_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="left"
+            android:layout_below="@id/ll_bind_layout0_item_owner_review"
+            android:orientation="horizontal" >
+
+            <!-- 昵称 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/nickname"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_name_item_owner_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:text="test"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bind_layout2_item_owner_review"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/bind_layout1"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+            <!-- 角色 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/role"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_role_item_owner_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:text="test"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/bind_layout3"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/ll_bind_layout2_item_owner_review"
+            android:gravity="left"
+            android:orientation="horizontal" >
+
+            <!-- 申请绑定 -->
+            <TextView
+                android:id="@+id/textview2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/require_binding_2"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_address_item_owner_review"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:text="test"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="18dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btn_agree_item_owner_review"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/fillet_button"
+            android:text="@string/agree"
+            android:textColor="@color/write" />
+
+        <Button
+            android:id="@+id/btn_refuse_item_owner_review"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/fillet_button"
+            android:text="@string/refuse"
+            android:textColor="@color/write" />
+    </LinearLayout>
+
+</LinearLayout>

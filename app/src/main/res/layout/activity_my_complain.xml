@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/write"
+    android:layout_height="match_parent" >
+
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:id="@+id/rl_title_mycomplain"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/write" >
+
+        <ImageButton
+            android:id="@+id/ib_back_mycomplain"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:background="@color/write"
+            android:scaleType="fitCenter"
+            android:src="@drawable/goback1" />
+
+        <TextView
+            android:id="@+id/tv_title_mycomplain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/my_complaint"
+            android:textColor="@color/style"
+            android:textSize="18sp" />
+<!--这是增加投诉的按钮-->
+        <ImageButton
+            android:id="@+id/ib_addcomplain_mycomplain"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/write"
+            android:scaleType="fitCenter"
+            android:src="@drawable/create_complain"  />
+
+    </RelativeLayout>
+
+    <!-- 标题图片 -->
+    <RelativeLayout
+        android:id="@+id/rl_themerl_mycomplain"
+        android:layout_width="wrap_content"
+        android:layout_height="135dp"
+        android:layout_gravity="center"
+        android:background="@color/write"
+        android:gravity="center"
+        android:layout_below="@id/rl_title_mycomplain">
+
+        <ImageView
+            android:id="@+id/im_themepic_mycomplain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/my_complain_title"
+            android:scaleType="fitCenter"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_list_layout_mycomplain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_themerl_mycomplain"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical" >
+
+<!--        <com.znt.ui.view.viewpager.listview.SwipeListView
+            android:id="@+id/mycomplain_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/write"
+            android:divider="#ffffff"
+            android:dividerHeight="20dp"
+            android:listSelector="@color/bc" >
+        </com.znt.ui.view.viewpager.listview.SwipeListView>-->
+
+        <ListView
+            android:id="@+id/listview_mycomplain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/write"
+            android:divider="#ffffff"
+            android:dividerHeight="1dp"
+            android:listSelector="@color/bc" ></ListView>
+    </LinearLayout>
+</RelativeLayout>

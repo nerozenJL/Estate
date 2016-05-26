@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/black"
+    android:orientation="horizontal" >
+    
+    <ProgressBar 
+        android:id="@+id/pb_wait_wifi_wait_openwifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+    <TextView 
+        android:id="@+id/tv_connect_wait_openwifi"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/wait_wifi"
+        android:gravity="center"
+        android:textColor="@color/write"
+        android:layout_marginLeft="10dp"
+        />
+
+</LinearLayout>

@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/write" >
+
+        <!--返回按钮layout-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="left|center_vertical" >
+
+            <ImageButton
+                android:id="@+id/zuce2_back"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:background="@color/write"
+                android:scaleType="fitCenter"
+                android:src="@drawable/goback1" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/regist"
+            android:textColor="@color/style"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    
+	<RelativeLayout
+        android:id="@+id/zhuce2_theme"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_gravity="center"
+        android:background="@color/write"
+        android:gravity="center" 
+        android:layout_below="@id/rl_title">
+
+        <ImageView
+            android:id="@+id/zhuce_themepic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"/>
+        <!--android:background="@drawable/zhuce_title" -->
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_content_setpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/zhuce2_theme"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="vertical" >
+        
+        <!-- 昵称、密码、确认密码 -->
+        <TableLayout 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            
+        <!-- 昵称 -->
+        <TableRow
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:id="@+id/shuru_name_text"
+                android:layout_height="wrap_content"
+                android:text="@string/nickname"
+                android:textColor="@drawable/textview3"
+                android:textSize="18sp" />
+            <EditText
+                android:id="@+id/shuru_name"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/singline_edittext"
+                android:ems="10"
+                android:gravity="top|center"
+                android:hint="@string/please_input_nickname"
+                android:imeOptions="actionNext"/>
+            </TableRow>
+            
+<!--             <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            
+        </LinearLayout> -->
+        
+        
+        <!-- 密码 -->
+        <TableRow 
+            android:layout_marginBottom="20dp">
+            <TextView
+        		android:id="@+id/textPassword_text"
+        		android:layout_height="wrap_content"
+        		android:text="@string/password"
+        		android:textColor="@drawable/textview3"
+        		android:textSize="18sp" />
+            
+            <EditText
+                android:id="@+id/textPassword"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/singline_edittext"
+                android:ems="10"
+                android:gravity="top|center"
+                android:hint="@string/please_set_password"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword" />
+        </TableRow>
+
+<!--         <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            
+        </LinearLayout> -->
+        
+        <!-- 确认密码 -->
+        <TableRow 
+            android:layout_marginBottom="10dp">
+            <TextView
+        		android:id="@+id/textPassword_text2"
+        		android:layout_height="wrap_content"
+        		android:text="@string/confirm_password"
+        		android:textColor="@drawable/textview3"
+        		android:textSize="18sp" />
+            
+            <EditText
+                android:id="@+id/shuru_password2"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/singline_edittext"
+                android:ems="10"
+                android:gravity="center|top"
+                android:hint="@string/please_confirm_password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword" />
+        </TableRow>
+
+
+<!--         <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            
+        </LinearLayout> -->
+            
+        </TableLayout>
+        
+        <!-- 注册按钮 -->
+    </LinearLayout>
+            <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignBottom="@id/rl_content_setpassword"
+            android:gravity="center"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_regist"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/rl_content_setpassword"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/fillet_button"
+                android:gravity="center"
+                android:text="@string/regist"
+                android:textColor="@color/write"
+                android:textSize="20sp" />
+
+</RelativeLayout>

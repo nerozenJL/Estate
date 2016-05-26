@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/write" >
+
+    <!-- 标题栏 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_title_opendoor"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/write" >
+
+        <!--返回按钮layout-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="left|center_vertical" >
+
+            <ImageButton
+                android:id="@+id/ib_back_opendoor"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:background="@color/write"
+                android:scaleType="fitCenter"
+                android:src="@drawable/goback1" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title_opendoor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/opendoorway"
+            android:textColor="@color/style"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <!-- 标题图片 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_theme_opendoor"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_below="@id/rl_title_opendoor"
+        android:layout_gravity="center"
+        android:background="@color/write"
+        android:gravity="center" >
+
+        <ImageView
+            android:id="@+id/themepicrl_opendoor"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/opendoor_title"
+            android:scaleType="fitCenter" />
+    </RelativeLayout>
+
+    <!-- 内容 -->
+
+    <LinearLayout
+        android:id="@+id/ll_upload_picture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_theme_opendoor"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical" >
+
+        <!-- 蓝牙/wifi切换 -->
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/opendoor_layout1"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:background="@drawable/relative_layout_background"-->
+            <!--android:layout_height="wrap_content"-->
+           <!-->-->
+
+
+                <!--<RadioGroup-->
+                    <!--android:id="@+id/radiogroup_bluetoothwifiSwitcher"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:layout_gravity="center"-->
+
+                    <!--android:gravity="center"-->
+                    <!--android:orientation="horizontal" >-->
+                    <!--&lt;!&ndash; android:layout_weight="2"&ndash;&gt;-->
+
+                    <!--<RadioButton-->
+                        <!--android:id="@+id/wifi_true"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:button="@null"-->
+                         <!--/>-->
+                    <!--&lt;!&ndash;android:layout_weight="3"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_weight="3"&ndash;&gt;-->
+                    <!--<RadioButton-->
+                        <!--android:id="@+id/bluetooth_false"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:checked="true"-->
+                        <!--android:button="@null"-->
+                        <!--/>-->
+
+                <!--</RadioGroup>-->
+        <!--</RelativeLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@color/style"
+                android:id="@+id/rb_unlock_with_wifi"
+                android:layout_marginRight="1dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_unlock_with_wifi"
+                    android:textColor="@color/write"
+                    android:gravity="center"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/textview_text_open_by_wifi"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@color/gray2"
+                android:id="@+id/rb_unlock_with_bluetooth"
+                android:layout_marginLeft="1dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/text_unlock_with_bluetooth"
+                    android:text="@string/textview_text_open_by_bluetooth"
+                    android:textColor="@color/gray1"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 摇一摇开关 -->
+
+        <RelativeLayout
+                android:id="@+id/opendoor_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:layout_toLeftOf="@+id/wifi_true"
+                android:background="@drawable/relative_layout_background">
+            <TextView
+                android:id="@+id/yaoyiyao_switcher_textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shake_to_unlock"
+                android:layout_centerHorizontal="true"
+                android:textSize="18sp"
+                android:layout_marginTop="15dp"
+                android:layout_alignParentLeft="true"/>
+            <CheckBox
+                android:id="@+id/yaoyiyao_switcher"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:button="@null"
+                android:checked="true"
+                />
+
+        </RelativeLayout>
+
+        <!-- 按键开门 -->
+
+        <!--<RelativeLayout-->
+            <!--android:id="@+id/opendoor_layout3"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="70dp"-->
+            <!--android:background="@drawable/relative_layout_background" >-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:src="@drawable/spilt_line_vertical" />-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/sild3_opendoor"-->
+                <!--android:layout_width="5dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@drawable/opendoor_image" />-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/opendoor_choice3"-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginLeft="20dp"-->
+                <!--android:layout_toRightOf="@id/sild3_opendoor"-->
+                <!--android:src="@drawable/choice" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_key_opendoor"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:text="@string/opendoor1"-->
+                <!--android:textSize="18sp" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tv_key2_opendoor"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/tv_key_opendoor"-->
+                <!--android:layout_centerHorizontal="true"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:text="@string/click_to_unlock"-->
+                <!--android:textColor="#6d7978"-->
+                <!--android:textSize="14sp" />-->
+
+            <!--<ImageView-->
+                <!--android:id="@+id/im3_opendoor"-->
+                <!--android:layout_width="45dp"-->
+                <!--android:layout_height="45dp"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_marginRight="20dp"-->
+                <!--android:src="@drawable/press_opendoor" />-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:layout_alignParentBottom="true"-->
+                <!--android:scaleType="fitXY"-->
+                <!--android:src="@drawable/spilt_line_vertical" />-->
+        <!--</RelativeLayout>-->
+    </LinearLayout>
+
+</RelativeLayout>

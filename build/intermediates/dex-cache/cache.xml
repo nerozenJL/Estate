@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="G:\Android WorkSpace\Estate\app\libs\httpmime-4.2.5.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6efc2f9df23c2ac4d3b701a11cab9f9fa6a641d4">
+        <dex dex="G:\Android WorkSpace\Estate\app\build\intermediates\pre-dexed\debug\httpmime-4.2.5-f041d18d8a09b223074dc0f287809049c7fb2628.jar" />
+    </item>
+    <item
+        jar="G:\Android WorkSpace\Estate\app\build\intermediates\exploded-aar\Estate\library\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b268cc606dc5061d064049760fc05e7c05bfdbe6">
+        <dex dex="G:\Android WorkSpace\Estate\app\build\intermediates\pre-dexed\debug\classes-5e8bf403282b5b405d3265492effc37c7f73a7b2.jar" />
+    </item>
+    <item
+        jar="G:\Android WorkSpace\Estate\app\libs\universal-image-loader-1.9.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e33324b770223932d467e4ec39639b0c15f3b94e">
+        <dex dex="G:\Android WorkSpace\Estate\app\build\intermediates\pre-dexed\debug\universal-image-loader-1.9.2-11a4bb192b34b50f47be4cb26be320acf7ec1e61.jar" />
+    </item>
+    <item
+        jar="G:\Android WorkSpace\Estate\app\libs\alipaysdk.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="33d3102886e819ec70b32dd243a2b4d181ac7089">
+        <dex dex="G:\Android WorkSpace\Estate\app\build\intermediates\pre-dexed\debug\alipaysdk-29e6d118cef804b1217901418140102b88a00862.jar" />
+    </item>
+    <item
+        jar="G:\Android WorkSpace\Estate\app\build\intermediates\exploded-aar\Estate\casloginprocess\unspecified\jars\libs\jsoup-1.8.3.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3a86e137575e4a45f5a9eec407f8135512e823a2">
+        <dex dex="G:\Android WorkSpace\Estate\app\build\intermediates\pre-dexed\debug\jsoup-1.8.3-d15f04ad459b70b1ffee27d08b8a1950a68a99d3.jar" />
+    </item>
+    <item
+        jar="G:\Android WorkSpace\Estate\app\libs\libammsdk.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ef29ec238e1bad6c47297595fada8d7a7d794ff0">
+        <dex dex="G:\Android WorkSpace\Estate\app\build\intermediates\pre-dexed\debug\libammsdk-0e91d4db9b851864e312f926cfdb5efe5575ca7c.jar" />
+    </item>
+    <item
+        jar="G:\Android WorkSpace\Estate\app\build\intermediates\exploded-aar\Estate\logCollector\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aacb3b7583861b7367facb97f60945ead09793eb">
+        <dex dex="G:\Android WorkSpace\Estate\app\build\intermediates\pre-dexed\debug\classes-fd947d3bbb2a64a861ae487702f33321d0d5e1dd.jar" />
+    </item>
+    <item
+        jar="G:\Android WorkSpace\Estate\app\libs\alipaysecsdk.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="7413c074c9edf523050267b93d0875151dc4b644">
+        <dex dex="G:\Android WorkSpace\Estate\app\build\intermediates\pre-dexed\debug\alipaysecsdk-634d9bb94a67c1bcd1f59f6f51e81739fe01c5ba.jar" />
+    </item>
+    <item
+        jar="C:\Users\Mengcz\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3.1\ecb6e1f8e4b0e84c4b886c2f14a1500caf309757\gson-2.3.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="ecb6e1f8e4b0e84c4b886c2f14a1500caf309757">
+        <dex dex="G:\Android WorkSpace\Estate\app\build\intermediates\pre-dexed\debug\gson-2.3.1-20799df5d66e296139f42f06659c2b27bcd3fb4f.jar" />
+    </item>
+    <item
+        jar="G:\Android WorkSpace\Estate\app\libs\UPPayAssistEx.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="e9b0978614427e34dec47576c6dc335a89c7e9e4">
+        <dex dex="G:\Android WorkSpace\Estate\app\build\intermediates\pre-dexed\debug\UPPayAssistEx-28d936ec783d614e4ce1dccc05fba8712c53c084.jar" />
+    </item>
+    <item
+        jar="G:\Android WorkSpace\Estate\app\libs\android-async-http-1.4.8.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="77bbfe240e437ecb396d982afa0d3bd4f9090ba7">
+        <dex dex="G:\Android WorkSpace\Estate\app\build\intermediates\pre-dexed\debug\android-async-http-1.4.8-a6790705424a2e8dfca691e498e75abf78ad2aa0.jar" />
+    </item>
+    <item
+        jar="G:\Android WorkSpace\Estate\app\build\intermediates\exploded-aar\Estate\casloginprocess\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d547c53d148ade196e61466207b4ddece99bf47d">
+        <dex dex="G:\Android WorkSpace\Estate\app\build\intermediates\pre-dexed\debug\classes-75a60b6831b3283a3c5f7d6a8ec31dcd8f82b564.jar" />
+    </item>
+    <item
+        jar="G:\Android WorkSpace\Estate\app\libs\libpingpp.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3a0b7b6faa13822b5d64f3516710ba276a56f69f">
+        <dex dex="G:\Android WorkSpace\Estate\app\build\intermediates\pre-dexed\debug\libpingpp-88a2d85b2691af1ae60c9b51178221fb62bc4783.jar" />
+    </item>
+    <item
+        jar="G:\Android WorkSpace\Estate\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
+        <dex dex="G:\Android WorkSpace\Estate\app\build\intermediates\pre-dexed\debug\classes-7f55c50ffb00265ae3b89b564e0783d36c6ad916.jar" />
+    </item>
+    <item
+        jar="F:\androidSDK\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="G:\Android WorkSpace\Estate\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-9b4d84bd0b2c13dcb475528d4dc1c5060b5fce18.jar" />
+    </item>
+    <item
+        jar="G:\Android WorkSpace\Estate\app\build\intermediates\exploded-aar\Estate\myvolleyrequestlib\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="859b90e04890ea8a01f0d60e46a1c960da9ffdfb">
+        <dex dex="G:\Android WorkSpace\Estate\app\build\intermediates\pre-dexed\debug\classes-6ec29a5cdd8cf667468e0f610bf145ee971d8b46.jar" />
+    </item>
+    <item
+        jar="G:\Android WorkSpace\Estate\app\build\intermediates\exploded-aar\com.android.volley\volley\unspecified\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b418bd30a46f4b502947448aed22bf25ab4570de">
+        <dex dex="G:\Android WorkSpace\Estate\app\build\intermediates\pre-dexed\debug\classes-1e26653bcc2b0cc847ef70c33c15183a413f22b2.jar" />
+    </item>
+    <item
+        jar="G:\Android WorkSpace\Estate\app\libs\alipayutdid.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4345fa0a5a7768f2f9c86aaab7db9e2906765193">
+        <dex dex="G:\Android WorkSpace\Estate\app\build\intermediates\pre-dexed\debug\alipayutdid-5bfeffb38c04139f90460e89576dfc1d8cc7624a.jar" />
+    </item>
+
+</items>

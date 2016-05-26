@@ -1,0 +1,310 @@
+[
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\myrepair_evaluate.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\myrepair_evaluate.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_storewebview.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\fragment_storewebview.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_reset_password.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_reset_password.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pay.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\pay.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\adapter_announcement.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\adapter_announcement.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_myproperty.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\item_myproperty.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\low_opendoor_way.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\low_opendoor_way.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_cycle_viewpager_contet.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\view_cycle_viewpager_contet.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_regist2.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_regist2.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_popup_menu_item_layout.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_popup_menu_item_layout.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_me.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_me.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_mypropert.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_mypropert.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_cover.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_cover.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_shop.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_shop.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_repair_submit.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_repair_submit.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_list_menu_item_radio.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_mybind.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\item_mybind.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_verification2.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_verification2.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_cycle_viewpager_indicator.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\view_cycle_viewpager_indicator.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_close_item.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_action_mode_close_item.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_homeactivity.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_homeactivity.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\listitem_dp_swicher.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\listitem_dp_swicher.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_verification1.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_verification1.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_include.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_activity_chooser_view_include.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_wait_openwifi.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\dialog_wait_openwifi.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_ower_review.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\item_ower_review.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_vertical.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\Estate\\library\\unspecified\\res\\layout\\pull_to_refresh_header_vertical.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_opendoor.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_opendoor.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_checkbox.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_list_menu_item_checkbox.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_decor_overlay.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_action_bar_decor_overlay.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_switch_department.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\dialog_switch_department.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\pull_to_refresh.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\znt.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\znt.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_store_preview.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\fragment_store_preview.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_me3.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_me3.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_my_complain.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_my_complain.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mycomplain_evaluate.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\mycomplain_evaluate.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_mybind.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_mybind.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_verification3.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_verification3.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_mydata.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_mydata.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_decor_include.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_action_bar_decor_include.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_complain.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_complain.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_tabbar.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_action_bar_tabbar.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\listitem.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\listitem.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_me2.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_me2.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_low_open.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_low_open.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_view.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_search_view.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_ower_review.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_ower_review.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\test.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\test.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_high_open.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\fragment_high_open.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\low_fragment.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\low_fragment.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_setpassword.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_setpassword.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_regist.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_regist.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_findpassword.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_findpassword.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_tied_oweners.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_tied_oweners.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_home.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_action_bar_home.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_expanded_menu_layout.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_announcementlist.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_announcementlist.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_my_repaire.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_my_repaire.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_myrepair.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\item_myrepair.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_announcement.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\activity_announcement.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_icon.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_list_menu_item_icon.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_action_menu_layout.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_action_bar_title_item.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\support_simple_spinner_dropdown_item.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_tab.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_action_bar_tab.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_horizontal.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\Estate\\library\\unspecified\\res\\layout\\pull_to_refresh_header_horizontal.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_upload_picture.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\dialog_upload_picture.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_banner.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\view_banner.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_me_list.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\layout_me_list.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    }
+]

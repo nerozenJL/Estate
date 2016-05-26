@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:background="@color/write">
+    
+    <!-- 标题栏&返回键 -->
+    <RelativeLayout
+        android:id="@+id/rl_title_announcementlist"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/write" >
+        
+        <ImageButton 
+            android:id="@+id/btn_back_announcementlist"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:background="@color/write"
+            android:scaleType="fitCenter"
+            android:src="@drawable/goback1"/>
+
+        <TextView
+            android:id="@+id/tv_title_announcementlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/notice"
+            android:textColor="@color/style"
+            android:textSize="18sp" />
+    </RelativeLayout>
+    
+    <!-- 主题图片 -->
+	<RelativeLayout
+        android:id="@+id/rl_announcementlist"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_gravity="center"
+        android:background="@color/write"
+        android:gravity="center"
+        android:layout_below="@id/rl_title_announcementlist">
+
+        <ImageView
+            android:id="@+id/im_themepic_announcementlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gonggao_title" 
+            android:scaleType="fitCenter"/>
+    </RelativeLayout>
+    
+	<!-- 公告内容列表 -->
+    <ListView 
+        android:id="@+id/istview_announcementlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_announcementlist"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:dividerHeight="25dp"
+        android:listSelector="@color/divier"
+        android:divider="@color/write"
+        ></ListView>
+
+</RelativeLayout>

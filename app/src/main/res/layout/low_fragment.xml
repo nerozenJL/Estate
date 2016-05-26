@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.ryon.testproject.MainActivity">
+
+    <!--根布局-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--园区开锁和楼栋开锁-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="1dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <!--呼叫物管-->
+            <LinearLayout
+                android:id="@+id/ib_call_out_property_manager_wifi"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_weight="1"
+                android:background="#9a59b3"
+                android:layout_marginRight="2dp"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+                    <ImageView
+
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/call_out_propertymanager"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="@color/write"
+                        android:textSize="14sp"
+                        android:text="呼叫物业"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--一键开锁-->
+            <LinearLayout
+                android:id="@+id/ib_open_park_low_open"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_weight="1"
+                android:background="#e67d21">
+
+                <ImageView
+                    android:id="@+id/wifi_open_imageview"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/unlock_garden"/>
+
+                <TextView
+                    android:id="@+id/wifi_open_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:textColor="@color/write"
+                    android:textSize="14sp"
+                    android:text="一键开锁"/>
+            </LinearLayout>
+
+            <!--楼栋开锁-->
+            <!--<LinearLayout-->
+                <!--android:id="@+id/ib_open_build_low_open"-->
+                <!--android:layout_width="0dp"-->
+                <!--android:layout_height="100dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:background="#9a59b3">-->
+
+                <!--<ImageView-->
+
+                    <!--android:layout_width="35dp"-->
+                    <!--android:layout_height="35dp"-->
+                    <!--android:layout_marginLeft="16dp"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:src="@drawable/unlock_building"/>-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_marginLeft="8dp"-->
+                    <!--android:textColor="@color/write"-->
+                    <!--android:textSize="14sp"-->
+                    <!--android:text="楼栋开锁"/>-->
+            <!--</LinearLayout>-->
+        </LinearLayout>
+
+        <!--投诉、保修和缴费-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="1dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!--投诉-->
+            <LinearLayout
+                android:id="@+id/ib_complain_housekeeper_wifi"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_weight="1"
+                android:background="#fdbc48"
+                android:layout_marginRight="1dp"
+                android:orientation="horizontal">
+
+                <ImageView
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/complain"/>
+
+                <!--文字区域-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/write"
+                        android:textSize="14sp"
+                        android:text="物业投诉"/>
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textColor="@color/write"-->
+                        <!--android:textSize="6sp"-->
+                        <!--android:layout_marginTop="2dp"-->
+                        <!--android:text="生活贴心助手" />-->
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--报修-->
+            <LinearLayout
+                android:id="@+id/ib_replair_housekeeper_wifi"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_weight="1"
+                android:background="#2ccb6e"
+                android:layout_marginLeft="1dp"
+                android:layout_marginRight="1dp"
+                android:orientation="horizontal">
+
+                <ImageView
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/complair"/>
+
+                <!--文字区域-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/write"
+                        android:textSize="14sp"
+                        android:text="在线报修"/>
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textColor="@color/write"-->
+                        <!--android:textSize="6sp"-->
+                        <!--android:layout_marginTop="2dp"-->
+                        <!--android:singleLine="true"-->
+                        <!--android:text="24小时及时抢修"/>-->
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--缴费-->
+            <LinearLayout
+                android:id="@+id/ib_pay_housekeeper_wifi"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_weight="1"
+                android:background="#26a9df"
+                android:layout_marginLeft="1dp"
+                android:orientation="horizontal">
+
+                <ImageView
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/pay"/>
+
+                <!--文字区域-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/write"
+                        android:textSize="14sp"
+                        android:text="便捷缴费"/>
+
+                    <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:textColor="@color/write"-->
+                        <!--android:textSize="6sp"-->
+                        <!--android:layout_marginTop="2dp"-->
+                        <!--android:text="缴纳当月费用"/>-->
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

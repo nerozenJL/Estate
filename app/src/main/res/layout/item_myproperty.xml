@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shapeline"
+    android:orientation="vertical" >
+    
+    <ImageView 
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/myproperty_icon"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_code_item_myproperty"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="left"
+        android:orientation="horizontal" >
+		<!-- 编号 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/number"
+            android:textSize="16sp"/>
+		<!-- 编号内容 -->
+        <TextView
+            android:id="@+id/tv_code_item_myproperty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" 
+            android:textSize="16sp"
+            android:text="test"/>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/ll_square_item_myproperty"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="left"
+        android:layout_below="@id/ll_code_item_myproperty"
+        android:orientation="horizontal" >
+		<!-- 面积 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/propertySquare" 
+            android:textSize="16sp"/>
+		<!-- 面积内容 -->
+        <TextView
+            android:id="@+id/tv_propertysquare_item_myproperty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" 
+            android:textSize="16sp"
+            android:text="test"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_role__item_myproperty"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/ll_square_item_myproperty"
+        android:gravity="left"
+        android:orientation="horizontal" >
+        <!-- 类型 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/role"
+            android:textSize="16sp"/>
+        <!-- 类型内容 -->
+        <TextView
+            android:id="@+id/tv_role_item_myproperty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="test"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_status_item_myproperty"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/ll_role__item_myproperty"
+        android:gravity="left"
+        android:orientation="horizontal" >
+		<!-- 状态 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/property_status"
+            android:textSize="16sp"/>
+		<!-- 状态内容 -->
+        <TextView
+            android:id="@+id/tv_status_item_myproperty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" 
+            android:textSize="16sp"
+            android:text="test"/>
+    </LinearLayout>
+    
+	<LinearLayout
+	    android:id="@+id/ll_type_item_myproperty"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/ll_status_item_myproperty"
+        android:gravity="left"
+        android:orientation="horizontal" >
+		<!-- 类型 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/property_type"
+            android:textSize="16sp"/>
+		<!-- 类型内容 -->
+        <TextView
+            android:id="@+id/tv_type_item_myproperty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" 
+            android:textSize="16sp"
+            android:text="test"/>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_bind_status_item_myproperty"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/ll_type_item_myproperty"
+        android:gravity="left"
+        android:orientation="horizontal" >
+        <!-- 类型 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/binding_status"
+            android:textSize="16sp"/>
+        <!-- 类型内容 -->
+        <TextView
+            android:id="@+id/tv_bind_status_item_myproperty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="test"/>
+    </LinearLayout>
+	<LinearLayout
+	    android:id="@+id/ll_location_item_myproperty"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/ll_bind_status_item_myproperty"
+        android:gravity="left"
+        android:orientation="horizontal" >
+		<!-- 地址 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/property_adress"
+            android:textSize="16sp"/>
+        <!-- 地址内容 -->
+        <TextView
+            android:id="@+id/tv_location_item_myproperty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:text="test"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

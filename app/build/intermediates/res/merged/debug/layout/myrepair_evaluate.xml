@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 标题栏&返回&提交 -->
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/write" >
+
+        <LinearLayout
+            android:id="@+id/myrepair_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical" >
+
+            <ImageButton
+                android:id="@+id/myrepair_evaluate_back"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:background="@color/write"
+                android:scaleType="fitCenter"
+                android:src="@drawable/goback1" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/myrepair_textview3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/evaluate_to_repair"
+            android:textColor="@color/style"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/myrepaira_ensure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="right|center_vertical" >
+
+            <ImageButton
+                android:id="@+id/my_submit"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/write"
+                android:scaleType="fitCenter"
+                android:src="@drawable/submit" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/spilt_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/spilt_line_vertical" />
+    </RelativeLayout>
+
+    <!--内容-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_title"
+        android:padding="30dp">
+
+        <!-- 内容正文 -->
+        <RelativeLayout
+            android:id="@+id/repair_content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--标题-->
+            <TextView
+                android:id="@+id/myrepair_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下水道坏了"
+                android:gravity="left"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:id="@+id/spilt1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/myrepair_title1"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/spilt_line_vertical"
+                android:scaleType="fitXY"/>
+
+            <!--正文-->
+            <TextView
+                android:id="@+id/myrepair_content1"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/spilt1"
+                android:layout_marginTop="8dp"
+                android:gravity="left"
+                android:text="下水道堵住了，无法排水"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+        <!--维修人员-->
+        <RelativeLayout
+            android:id="@+id/repairman_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/repair_content_layout">
+
+            <!--姓名-->
+            <TextView
+                android:id="@+id/repairman_nametext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="维修人员："
+                android:gravity="left"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/repairman_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/repairman_nametext"
+                android:text="隔壁老王"
+                android:gravity="left"
+                android:textSize="15sp"/>
+
+            <!--电话-->
+            <TextView
+                android:id="@+id/repairman_phonetext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/repairman_name"
+                android:layout_marginTop="8dp"
+                android:gravity="left"
+                android:text="电话："
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/repairman_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/repairman_name"
+                android:layout_toRightOf="@id/repairman_phonetext"
+                android:layout_marginTop="8dp"
+                android:gravity="left"
+                android:text="110120119"
+                android:textSize="12sp"/>
+
+            <ImageView
+                android:id="@+id/repair_spilt1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/repairman_phonetext"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/spilt_line_vertical"
+                android:scaleType="fitXY"/>
+
+
+        </RelativeLayout>
+
+        <!--评分部分-->
+        <RelativeLayout
+            android:id="@+id/point_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_below="@id/repairman_layout">
+
+            <TextView
+                android:id="@+id/zhonghe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/comprehensive_score"
+                android:textSize="20sp"/>
+
+            <!--好中差评-->
+            <RatingBar
+                android:id="@+id/repair_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/myRatingBar"
+                android:layout_toRightOf="@id/zhonghe"/>
+
+            <!--<RadioGroup
+                android:id="@+id/point_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/zhonghe"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/goodpoint"
+                    android:text="好评"
+                    android:checked="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+
+                <RadioButton
+                    android:id="@+id/normalpoint"
+                    android:text="中评"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/badpoint"
+                    android:text="差评"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+-->
+            <ImageView
+                android:id="@+id/spilt2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/zhonghe"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/spilt_line_vertical"
+                android:scaleType="fitXY"/>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/review_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/point_layout"
+            android:layout_marginTop="10dp">
+
+            <!--评论框-->
+            <EditText
+                android:id="@+id/myrepair_elaborate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="left"
+                android:hint="@string/comment"
+                />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/review_layout"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:id="@+id/status_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="目前状态:"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/status_text"
+                android:text="test"
+                android:textSize="20sp"
+                android:textColor="@color/red"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

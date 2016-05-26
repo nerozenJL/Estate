@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/write" >
+
+        <!--返回按钮layout-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="left|center_vertical" >
+
+            <ImageButton
+                android:id="@+id/pay_back"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:background="@color/write"
+                android:scaleType="fitCenter"
+                android:src="@drawable/goback1" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/property_bill"
+            android:textColor="@color/style"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/spilt_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/spilt_line_vertical" />
+    </RelativeLayout>
+
+
+
+    <!--底栏-->
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/write" >
+
+        <ImageView
+            android:id="@+id/spilt_line_2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/spilt_line_vertical" />
+
+        <!--回退按钮-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/spilt_line_2"
+            android:gravity="left|center_vertical" >
+
+            <ImageButton
+                android:id="@+id/web_back"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:background="@color/write"
+                android:scaleType="fitCenter"
+                android:src="@drawable/exit" />
+        </LinearLayout>
+
+        <!--刷新按钮-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spilt_line_2"
+            android:layout_alignParentRight="true">
+
+            <ImageButton
+                android:id="@+id/refresh"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:background="@color/write"
+                android:scaleType="fitCenter"
+                android:src="@drawable/refresh"
+                />
+        </LinearLayout>
+<!--    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@drawable/radiopressed5"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="@string/radiobt4"
+            android:textColor="@drawable/radiopressed4"
+            android:textSize="15sp" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/radiopressed5"
+            android:button="@null"
+            android:gravity="center"
+            android:text="@string/radiobt5"
+            android:textColor="@drawable/radiopressed4"
+            android:textSize="15sp" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/pay_fragement"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radioGroup2" >
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/payall"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/style"
+        android:text="@string/buttenname"
+        android:textColor="@color/write"
+        android:textSize="20sp" />-->
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_title"
+        android:layout_above="@id/bottom">
+
+        <WebView
+            android:id="@+id/pay_webview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></WebView>
+    </RelativeLayout>
+</RelativeLayout>

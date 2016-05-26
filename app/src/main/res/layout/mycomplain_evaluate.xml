@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- 标题栏&返回&提交 -->
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/write" >
+
+        <LinearLayout
+            android:id="@+id/mydata_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical" >
+
+            <ImageButton
+                android:id="@+id/mycomplain_evaluate_back"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:background="@color/write"
+                android:scaleType="fitCenter"
+                android:src="@drawable/goback1" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/mycomplain_textview3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/evaluate_to_complaint"
+            android:textColor="@color/style"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/mydata_ensure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="right|center_vertical" >
+
+            <ImageButton
+                android:id="@+id/my_submit"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/write"
+                android:scaleType="fitCenter"
+                android:src="@drawable/submit" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/spilt_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/spilt_line_vertical" />
+    </RelativeLayout>
+
+    <!--内容-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_title"
+        android:layout_marginTop="35dp"
+        android:padding="30dp">
+
+        <!-- 内容正文 -->
+        <RelativeLayout
+            android:id="@+id/content_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!--标题-->
+            <TextView
+                android:id="@+id/mycomplain_title1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下水道坏了"
+                android:gravity="left"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:id="@+id/spilt1"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/mycomplain_title1"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/spilt_line_vertical"
+                android:scaleType="fitXY"/>
+
+            <!--正文-->
+            <TextView
+                android:id="@+id/mycomplain_content1"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@id/spilt1"
+                android:layout_marginTop="8dp"
+                android:gravity="left"
+                android:text="下水道堵住了，无法排水"
+                android:textSize="18sp"/>
+
+        </RelativeLayout>
+
+
+        <!--投诉的评分和评论功能已作废-->
+<!--        &lt;!&ndash;评分部分&ndash;&gt;
+        <RelativeLayout
+            android:id="@+id/point_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/content_layout">
+
+            <TextView
+                android:id="@+id/zhonghe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tv17"
+                android:textSize="20sp"/>
+
+            &lt;!&ndash;好中差评&ndash;&gt;
+            <RadioGroup
+                android:id="@+id/point_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/zhonghe"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/goodpoint"
+                    android:text="好评"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/normalpoint"
+                    android:text="中评"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <RadioButton
+                    android:id="@+id/badpoint"
+                    android:text="差评"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RadioGroup>
+
+            <ImageView
+                android:id="@+id/spilt2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/zhonghe"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/spilt_line_vertical"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/review_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/point_layout"
+            android:layout_marginTop="60dp">
+
+            &lt;!&ndash;评论框&ndash;&gt;
+            <EditText
+                android:id="@+id/mycomplain_elaborate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="left"
+                android:hint="@string/hint11"
+                />
+
+        </RelativeLayout>-->
+    </RelativeLayout>
+
+
+<!--    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title"
+        android:gravity="left"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/mycomplain_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:text="下水道坏了" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:gravity="left"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/mycomplain_content1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="dsadadadasda"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/mycomplain_result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:text="sd adsdadadadadada"
+                />
+        </LinearLayout>
+       
+
+        <LinearLayout
+            android:id="@+id/mycomplain_star"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+
+            <RatingBar
+                android:id="@+id/ratingbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:numStars="5"
+                android:rating="5"
+                android:stepSize="0.5" />
+        </LinearLayout>
+    </LinearLayout>-->
+
+</RelativeLayout>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/write" >
+
+    <RadioGroup
+        android:id="@+id/radioGroup_homeactivity"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/write"
+        android:layout_alignParentBottom="true"
+
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_home_homeactivity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/home"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="智能通"
+            android:textColor="@color/style"
+            android:textSize="18dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_store_homeactivity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawableTop="@drawable/shop"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="@string/Store"
+            android:textColor="@color/rb_unpressed"
+            android:textSize="18dp"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_me_homeactivity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawableTop="@drawable/me"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textColor="@color/rb_unpressed"
+            android:textSize="18dp"
+            android:text="我的"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_switch_homeactivity"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawableTop="@drawable/dp_switcher_homepage"
+            android:scaleX="0.7"
+            android:scaleY="0.7"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textColor="@color/rb_unpressed"
+            android:textSize="18dp"
+            android:text="账户"
+            />
+        <!-- -->
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/radioGroup_homeactivity"
+        android:background="#F2F2F2" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/home_linearlayout"
+        android:orientation="vertical"
+        android:layout_above="@id/line"
+        android:layout_alignParentTop="true">
+
+        <fragment
+            android:id="@+id/fragment_cycle_viewpager_content"
+            android:name="com.uestc.ui.view.viewpager.CycleViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="180dp" />
+
+        <LinearLayout
+            android:id="@+id/ll_announcement_homeactivity"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/gray2"
+            android:layout_below="@id/fragment_cycle_viewpager_content" >
+
+            <ImageView
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:src="@color/style" />
+
+            <ImageView
+                android:id="@+id/iv_announcementrl_homeactivity"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/gonggao" />
+
+            <TextView
+                android:id="@+id/tv_first_announcementrl_homeactivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="4"
+                android:ellipsize="marquee"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@drawable/textview"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:id="@+id/rl_more_homeactivity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center" >
+
+                <ImageButton
+                    android:id="@+id/ib_more_homeactivity"
+                    android:layout_width="20dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@color/gray2"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/more1" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/ifragement"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_below="@id/ll_announcement_homeactivity" >
+        </RelativeLayout>
+
+        <fragment
+            android:id="@+id/gallary_store_preview"
+            android:name="com.uestc.ui.view.viewpager.CycleViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_below="@id/ifragement"
+            android:layout_above="@id/line"/>
+
+    </LinearLayout>
+<!--这是广告的fragment-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/store_context"
+        android:layout_above="@id/line">
+
+    </RelativeLayout>
+
+</RelativeLayout>

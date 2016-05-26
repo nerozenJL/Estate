@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/write" >
+
+    <!-- 标题栏&返回&提交 -->
+
+    <RelativeLayout
+        android:id="@+id/rl_title_mydata"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/write" >
+
+        <!--返回按钮layout-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:gravity="left|center_vertical" >
+
+            <ImageButton
+                android:id="@+id/ib_back_mydata"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:background="@color/write"
+                android:scaleType="fitCenter"
+                 />
+            <!--android:src="@drawable/goback1"-->
+        </LinearLayout>
+
+        <!--标题-->
+        <TextView
+            android:id="@+id/tv_title_mydata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/change_profile"
+            android:textColor="@color/style"
+            android:textSize="18sp" />
+
+        <!--确认按钮layout-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="right|center_vertical" >
+
+            <ImageButton
+                android:id="@+id/ib_submit_mydata"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/write"
+                android:scaleType="fitCenter"
+                 />
+            <!--android:src="@drawable/submit"-->
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/spilt_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/spilt_line_vertical" />
+    </RelativeLayout>
+
+    <!-- 用户头像 -->
+
+    <ImageView
+        android:id="@+id/head_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@id/rl_title_mydata"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@color/write"
+        />
+    <!--android:src="@drawable/default_head_img" -->
+
+    <!-- 填写信息 -->
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/head_img"
+        android:gravity="center" >
+
+        <!-- 选择性别 -->
+
+        <TableRow
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:gravity="center" >
+
+            <RadioGroup
+                android:id="@+id/radiogroup_mydata"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <!--<RadioButton-->
+                    <!--android:id="@+id/girl3_mydata"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@null"-->
+                    <!--android:button="@null"-->
+                    <!--android:enabled="false" />-->
+
+                <RadioButton
+                    android:id="@+id/man_mydata"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+
+                    android:button="@null"
+                    android:checked="true" />
+                <!--android:background="@drawable/male"-->
+                <!--android:background="@drawable/male"-->
+
+                <RadioButton
+                    android:id="@+id/girl_mydata"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+
+                    android:button="@null" />
+                <!-- android:background="@drawable/female"-->
+                <!--android:background="@drawable/female"-->
+
+                <!--<RadioButton-->
+                    <!--android:id="@+id/girl2_mydata"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:background="@null"-->
+                    <!--android:button="@null"-->
+                    <!--android:enabled="false" />-->
+            </RadioGroup>
+        </TableRow>
+
+        <!-- 填写姓名 -->
+
+        <TableRow android:paddingBottom="10dp" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:layout_weight="7.8"
+                android:gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="10"
+                    android:gravity="bottom"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom"
+                            android:gravity="center"
+                            android:text="@string/name2"
+                            android:textColor="#a4b4b2"
+                            android:textSize="16sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_name_mydata"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ems="9"
+                        android:layout_gravity="center"
+                        android:gravity="left"
+                        android:textColor="#a4b4b2"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.1" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="top"
+                        android:src="@color/style" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2" >
+            </LinearLayout>
+        </TableRow>
+
+        <!-- 出生日期 -->
+
+        <TableRow android:paddingBottom="10dp" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:layout_weight="7.8"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="10"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1.5"
+                        android:text="@string/birthday2"
+                        android:textColor="#a4b4b2"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_born_mydata"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="2015年11月12日"
+                        android:textColor="#a4b4b2"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="right" >
+
+                        <ImageButton
+                            android:id="@+id/ib_reset_born_mydata"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="right"
+                            android:background="@color/write"
+                            android:scaleType="fitCenter"
+                             />
+                        <!--android:src="@drawable/born_date"-->
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.1" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="top"
+                        android:src="@color/style" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2" >
+            </LinearLayout>
+        </TableRow>
+
+        <!-- 紧急联系人 -->
+
+        <TableRow android:paddingBottom="10dp" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:layout_weight="7.8"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="10"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="bottom"
+                        android:text="@string/emergency_contact"
+                        android:textColor="#a4b4b2"
+                        android:textSize="16sp" />
+
+                    <!--<EditText
+                        android:id="@+id/reset_emergency_people"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:ems="9"
+                        android:gravity="bottom"
+                        android:textColor="#a4b4b2"
+                        android:textSize="16sp" />-->
+
+                    <EditText
+                        android:id="@+id/et_reset_emergency_people_mydata"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:ems="9"
+                        android:layout_gravity="center"
+                        android:textColor="#a4b4b2"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.1" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="top"
+                        android:src="@color/style" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2" >
+            </LinearLayout>
+        </TableRow>
+        <!-- 紧急联系电话 -->
+
+        <TableRow android:paddingBottom="10dp" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2"
+                android:orientation="horizontal">
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:layout_weight="7.8"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="10"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/emergency_contact_phone"
+                        android:textColor="#a4b4b2"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/et_reset_emergency_contact_mydata"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:background="@null"
+                        android:ems="9"
+                        android:textColor="#a4b4b2"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.1" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="top"
+                        android:src="@color/style" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2" >
+            </LinearLayout>
+        </TableRow>
+        <!-- 证件类型 -->
+
+        <TableRow android:paddingBottom="10dp" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2" >
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <Spinner
+                        android:id="@+id/spinner_mydata"
+                        android:layout_width="110dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/style"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tv_id_mydata"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:textColor="#a4b4b2"
+                        android:textSize="16sp" >
+                    </TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_weight="0.1" >
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_gravity="top"
+                        android:src="@color/style" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.2" >
+            </LinearLayout>
+        </TableRow>
+    </TableLayout>
+
+</RelativeLayout>

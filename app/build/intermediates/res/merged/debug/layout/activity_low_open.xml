@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/write"
+    tools:context="com.uestc.ui.activity.LowOpenActivity">
+
+    <!-- 标题栏 -->
+    <RelativeLayout
+        android:id="@+id/rl_title_low_open"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/write" >
+
+        <ImageButton
+            android:id="@+id/ib_back_low_open"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:background="@color/write"
+            android:scaleType="fitCenter"
+            android:src="@drawable/goback1" />
+
+        <TextView
+            android:id="@+id/tv_title_low_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/smart_unlock"
+            android:textColor="@color/style"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/ib_refresh_low_open"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:padding="14dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@color/write"
+            android:scaleType="fitCenter"
+            android:src="@drawable/refresh"  />
+
+        <ImageView
+            android:id="@+id/iv_spilt_line_low_open"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:scaleType="fitXY"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/spilt_line_vertical"/>
+    </RelativeLayout>
+<!--开门的按钮-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_title_low_open"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="50dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:id="@+id/btn_opendoorr_low_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:background="@color/write"
+            android:src="@drawable/low_open_false"/>
+<!--显示开门状态-->
+        <TextView
+            android:id="@+id/tv_status_low_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/style"
+            android:gravity="center_horizontal"
+            android:padding="20dp"
+            android:textSize="20sp"
+            android:text="点击开锁"/>
+    </LinearLayout>
+</RelativeLayout>
