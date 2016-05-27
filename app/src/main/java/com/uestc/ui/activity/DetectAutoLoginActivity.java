@@ -481,12 +481,9 @@ public class DetectAutoLoginActivity extends Activity {
                 if(getAnnouncementData == null){
                     TempStaticInstanceCollection.announcementList.setStatus(false);
                 }
-                GetAnnouncementData a = TempStaticInstanceCollection.announcementList;
-                GetAnnouncementData b = TempStaticInstanceCollection.announcementList;
             } else {
                 //Log.v("notify failed", "获取公告失败");
                 TempStaticInstanceCollection.announcementList = new GetAnnouncementData();
-
             }
         }
     }

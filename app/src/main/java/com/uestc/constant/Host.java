@@ -55,7 +55,6 @@ public class Host {
 	public static String getPropertyManagerPhoneList = host + "/query/getServicePhone";
 
 
-
 	/*2016/4/6商店预览图片地址接口*/
 	public static String getStorePreviewPictures = host + "/goods/goodsList/3/json"; //"3"指定获取了3张图片，后期写为可配置的
 
