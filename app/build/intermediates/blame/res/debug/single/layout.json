@@ -288,12 +288,12 @@
         "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_action_bar_tab.xml"
     },
     {
-        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_horizontal.xml",
-        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\Estate\\library\\unspecified\\res\\layout\\pull_to_refresh_header_horizontal.xml"
-    },
-    {
         "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_upload_picture.xml",
         "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\src\\main\\res\\layout\\dialog_upload_picture.xml"
+    },
+    {
+        "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_horizontal.xml",
+        "source": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\Estate\\library\\unspecified\\res\\layout\\pull_to_refresh_header_horizontal.xml"
     },
     {
         "merged": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_banner.xml",
