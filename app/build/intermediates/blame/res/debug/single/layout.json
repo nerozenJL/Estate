@@ -140,6 +140,10 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\listitem.xml"
     },
     {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_my_stop.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_my_stop.xml"
+    },
+    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mycomplain_evaluate.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\mycomplain_evaluate.xml"
     },
@@ -290,6 +294,10 @@
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_cover.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_cover.xml"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_my_stop_function_list.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\item_my_stop_function_list.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_regist.xml",

@@ -252,15 +252,18 @@ public class DetectAutoLoginActivity extends Activity {
         Bitmap appCoverBitmap = MyBitmapFactory.decodeRawBitMap(is);
         appCoverImageView.setImageBitmap(appCoverBitmap);
 
+        Intent intent = new Intent(DetectAutoLoginActivity.this, MyStopActivity.class);
+        startActivity(intent);
+
         /*new DetectAutoLoginTask().execute();*/ //开始自动登录活动的线程
 
         /*for(int i = 0; i < 10; i++) {
             new ConfigurationFilesAdapter().SetOrUpdateProperty(autoLoginConfigFilePath, "userName", "18680237011");
         }*/
 
-        BindCASReceiver(); //注册并启动CAS广播接收者
+        /*BindCASReceiver(); //注册并启动CAS广播接收者
 
-        new CASLoginProxy(DetectAutoLoginActivity.this).CASLogin("18680237011", "1234567");
+        new CASLoginProxy(DetectAutoLoginActivity.this).CASLogin("18680237011", "1234567");*/
         /*
         * 该Activity不作交互组件使用，可以增添一个类似App封面的背景，并添加线程做登录操作
         */

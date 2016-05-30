@@ -160,9 +160,9 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
 
-        <!--<service-->
-            <!--android:name="com.uestc.bluetooth.BluetoothLeService"-->
-            <!--android:enabled="true" />-->
+        <!-- <service -->
+        <!-- android:name="com.uestc.bluetooth.BluetoothLeService" -->
+        <!-- android:enabled="true" /> -->
 
         <activity
             android:name=".SetPasswordActivity"
@@ -174,10 +174,9 @@
                 <action android:name="com.example.broadcastpractice.FORCE_OFFLINE" />
             </intent-filter>
         </receiver>
-
         <receiver android:name="com.uestc.BroadcastReceivers.AutoConnectWiFiBroadcastReceiver">
             <intent-filter>
-                <action android:name="AUTO_UPDATE_IDEAL_WIFI"/>
+                <action android:name="AUTO_UPDATE_IDEAL_WIFI" />
             </intent-filter>
         </receiver>
 
@@ -200,7 +199,8 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".ShopActivity"></activity>
+        <activity android:name=".ShopActivity" />
+        <activity android:name=".MyStopActivity"></activity>
     </application>
 
 </manifest>

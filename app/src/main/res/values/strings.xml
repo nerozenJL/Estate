@@ -203,7 +203,7 @@
     <string name="textView_switch_dialog_title">选择登录园区</string>
     <string name="textView_switch_dialog_remember">记住我的选择</string>
     <string name="textView_switch_dialog_confirm">确定</string>
-    
+
     <string name="textView_tiedowner_description">请选择默认登陆的园区，若有更多园区需要绑定，请在提交后点击绑定更多。</string>
     <string name="textView_tiedowner_type">物业种类： </string>
     <!--<string name="1qfffq3f1f "-->
