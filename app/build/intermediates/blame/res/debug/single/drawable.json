@@ -32,8 +32,16 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\take_pic.png"
     },
     {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\back_from_my_stops.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\back_from_my_stops.png"
+    },
+    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\tousu.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\tousu.png"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\spilt_line_vertical.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\spilt_line_vertical.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\check_my_stops_lease_status.png",
@@ -42,10 +50,6 @@
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\choosen.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\choosen.xml"
-    },
-    {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\spilt_line_vertical.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\spilt_line_vertical.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\refresh.png",
@@ -158,6 +162,10 @@
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\star_false.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\star_false.png"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\my_stops_listitem_click_selector.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\my_stops_listitem_click_selector.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\star_half_false.png",
@@ -536,12 +544,12 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\guang_gao.png"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\my_stop_top_deco.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\my_stop_top_deco.png"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_search_dropdown_dark.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\drawable\\abc_search_dropdown_dark.xml"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\my_stop_top_deco.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\my_stop_top_deco.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\check_my_stops.png",

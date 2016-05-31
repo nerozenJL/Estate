@@ -20,24 +20,24 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_popup_menu_item_layout.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_list_menu_item_layout.xml"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_setpassword.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_setpassword.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_complain.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_complain.xml"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_list_menu_item_layout.xml"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_verification3.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_verification3.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_include.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_activity_chooser_view_include.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_verification3.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_verification3.xml"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_complain.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_complain.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh.xml",
@@ -52,16 +52,16 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\low_opendoor_way.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\test.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\test.xml"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_expanded_menu_layout.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_layout.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_expanded_menu_layout.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_expanded_menu_layout.xml"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\test.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\test.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_title_item.xml",
@@ -124,16 +124,16 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\fragment_storewebview.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\adapter_announcement.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\adapter_announcement.xml"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\myrepair_evaluate.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\myrepair_evaluate.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\listitem_dp_swicher.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\listitem_dp_swicher.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\myrepair_evaluate.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\myrepair_evaluate.xml"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\adapter_announcement.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\adapter_announcement.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\listitem.xml",
@@ -148,12 +148,12 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\mycomplain_evaluate.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_mybind.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\item_mybind.xml"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_decor_overlay.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_action_bar_decor_overlay.xml"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_mybind.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\item_mybind.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_my_complain.xml",
@@ -204,12 +204,12 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_search_view.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_mypropert.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_mypropert.xml"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_myrepair.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\item_myrepair.xml"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_mypropert.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_mypropert.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
@@ -220,28 +220,28 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_list_menu_item_radio.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_my_repaire.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_my_repaire.xml"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_tab.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_action_bar_tab.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_wait_openwifi.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\dialog_wait_openwifi.xml"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_my_repaire.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_my_repaire.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_homeactivity.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_homeactivity.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_me.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_me.xml"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_wait_openwifi.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\dialog_wait_openwifi.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_action_mode_bar.xml"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_me.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_me.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_repair_submit.xml",
@@ -256,28 +256,28 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_announcement.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_low_open.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_low_open.xml"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_switch_department.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\dialog_switch_department.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_verification1.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_verification1.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialog_switch_department.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\dialog_switch_department.xml"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_low_open.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_low_open.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_me_list.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\layout_me_list.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_vertical.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\Estate\\library\\unspecified\\res\\layout\\pull_to_refresh_header_vertical.xml"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_findpassword.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_findpassword.xml"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\pull_to_refresh_header_vertical.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\Estate\\library\\unspecified\\res\\layout\\pull_to_refresh_header_vertical.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\view_cycle_viewpager_indicator.xml",
@@ -288,16 +288,16 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\support_simple_spinner_dropdown_item.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_mybind.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_mybind.xml"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_my_stop_function_list.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\item_my_stop_function_list.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_cover.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_cover.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_my_stop_function_list.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\item_my_stop_function_list.xml"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_mybind.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_mybind.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_regist.xml",
@@ -308,11 +308,11 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\view_banner.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_store_preview.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\fragment_store_preview.xml"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view_list_item.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_activity_chooser_view_list_item.xml"
     }
 ]
