@@ -1,5 +1,6 @@
 package com.uestc.ui.activity;
 
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -122,7 +123,8 @@ public class MyStopActivity extends ActionBarActivity {
         }
     }
 
-    private void JumpToSetExceptionStragety() {
+    private void JumpToSetExceptonStragety() {
+        Intent intent = new Intent();
     }
 
     private void JumpToStopsLeaseStatus() {
