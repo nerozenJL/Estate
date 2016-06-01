@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from G:\git-cloned-projects\Estate\app\src\main\AndroidManifest.xml:2:1-206:12
+ADDED from G:\git-cloned-projects\Estate\app\src\main\AndroidManifest.xml:2:1-212:12
 	xmlns:android
 		ADDED from G:\git-cloned-projects\Estate\app\src\main\AndroidManifest.xml:2:11-69
 	package
@@ -139,7 +139,7 @@ ADDED from G:\git-cloned-projects\Estate\app\src\main\AndroidManifest.xml:37:5-8
 	android:name
 		ADDED from G:\git-cloned-projects\Estate\app\src\main\AndroidManifest.xml:37:22-77
 application
-ADDED from G:\git-cloned-projects\Estate\app\src\main\AndroidManifest.xml:39:5-204:19
+ADDED from G:\git-cloned-projects\Estate\app\src\main\AndroidManifest.xml:39:5-210:19
 MERGED from [com.android.support:appcompat-v7:19.1.0] G:\git-cloned-projects\Estate\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\AndroidManifest.xml:19:5-20
 MERGED from [Estate:library:unspecified] G:\git-cloned-projects\Estate\app\build\intermediates\exploded-aar\Estate\library\unspecified\AndroidManifest.xml:11:5-20
 MERGED from [com.android.volley:Estate-volley:unspecified] G:\git-cloned-projects\Estate\app\build\intermediates\exploded-aar\com.android.volley\Estate-volley\unspecified\AndroidManifest.xml:9:5-20
@@ -460,6 +460,12 @@ ADDED from G:\git-cloned-projects\Estate\app\src\main\AndroidManifest.xml:202:9-
 	android:name
 		ADDED from G:\git-cloned-projects\Estate\app\src\main\AndroidManifest.xml:202:19-47
 activity#com.uestc.ui.activity.MyStopActivity
-ADDED from G:\git-cloned-projects\Estate\app\src\main\AndroidManifest.xml:203:9-61
+ADDED from G:\git-cloned-projects\Estate\app\src\main\AndroidManifest.xml:204:9-52
 	android:name
-		ADDED from G:\git-cloned-projects\Estate\app\src\main\AndroidManifest.xml:203:19-49
+		ADDED from G:\git-cloned-projects\Estate\app\src\main\AndroidManifest.xml:204:19-49
+activity#com.uestc.ui.activity.CheckMyStopLeaseHistory
+ADDED from G:\git-cloned-projects\Estate\app\src\main\AndroidManifest.xml:207:9-209:74
+	android:theme
+		ADDED from G:\git-cloned-projects\Estate\app\src\main\AndroidManifest.xml:209:13-72
+	android:name
+		ADDED from G:\git-cloned-projects\Estate\app\src\main\AndroidManifest.xml:208:13-52

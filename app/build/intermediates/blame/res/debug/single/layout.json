@@ -76,6 +76,10 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_login.xml"
     },
     {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\tab_layout_check_lease_income_detail.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\tab_layout_check_lease_income_detail.xml"
+    },
+    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_tied_oweners.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_tied_oweners.xml"
     },
@@ -148,6 +152,10 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\mycomplain_evaluate.xml"
     },
     {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\tab_layout_check_lease_order_details.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\tab_layout_check_lease_order_details.xml"
+    },
+    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_decor_overlay.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_action_bar_decor_overlay.xml"
     },
@@ -214,6 +222,10 @@
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\layout\\abc_search_dropdown_item_icons_2line.xml"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_check_my_stop_lease_history.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\layout\\activity_check_my_stop_lease_history.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",

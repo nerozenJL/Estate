@@ -28,12 +28,12 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\raw\\complain.png"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\raw\\garden_unlock_false.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\raw\\garden_unlock_false.png"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\raw\\wifi_true.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\raw\\wifi_true.png"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\raw\\garden_unlock_false.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\raw\\garden_unlock_false.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\raw\\male_true.png",
@@ -88,16 +88,16 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\raw\\male_false_new.png"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\raw\\building_unlock_false.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\raw\\building_unlock_false.png"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\raw\\complair.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\raw\\complair.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\raw\\bluetooth_true.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\raw\\bluetooth_true.png"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\raw\\complair.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\raw\\complair.png"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\raw\\building_unlock_false.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\raw\\building_unlock_false.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\raw\\checkbox_off.png",

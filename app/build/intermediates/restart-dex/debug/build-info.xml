@@ -4,43 +4,34 @@
     api-level="21"
     density="xxhdpi"
     format="7"
-    timestamp="1078812028617146"
-    verifier="IMPLEMENTED_INTERFACES_CHANGE" >
+    timestamp="1174734935225427" >
 
     <task
         name="javac"
-        duration="201" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="67" />
+        duration="0" />
     <task
         name="verifier"
-        duration="5" />
+        duration="0" />
 
     <artifact
         location="G:\git-cloned-projects\Estate\app\build\intermediates\res\resources-debug.ap_"
         type="RESOURCES" />
-    <artifact
-        location="G:\git-cloned-projects\Estate\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
-        type="DEX" />
 
-    <build timestamp="1078297432184458" >
+    <build timestamp="1173840017081574" >
         <artifact
             location="G:\git-cloned-projects\Estate\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
-    <build
-        timestamp="1078812028617146"
-        verifier="IMPLEMENTED_INTERFACES_CHANGE" >
+    <build timestamp="1174734935225427" >
         <artifact
             location="G:\git-cloned-projects\Estate\app\build\intermediates\res\resources-debug.ap_"
             type="RESOURCES" />
-        <artifact
-            location="G:\git-cloned-projects\Estate\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_8\classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

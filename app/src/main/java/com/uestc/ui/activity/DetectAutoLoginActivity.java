@@ -252,7 +252,7 @@ public class DetectAutoLoginActivity extends Activity {
         Bitmap appCoverBitmap = MyBitmapFactory.decodeRawBitMap(is);
         appCoverImageView.setImageBitmap(appCoverBitmap);
 
-        Intent intent = new Intent(DetectAutoLoginActivity.this, MyStopActivity.class);
+        Intent intent = new Intent(DetectAutoLoginActivity.this, CheckMyStopLeaseHistory.class);
         startActivity(intent);
 
         /*new DetectAutoLoginTask().execute();*/ //开始自动登录活动的线程

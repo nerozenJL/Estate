@@ -1,11 +1,11 @@
 [
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mybinding_title.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\mybinding_title.png"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\car_unlock_false.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\car_unlock_false.png"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mybinding_title.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\mybinding_title.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_launcher.png",
@@ -40,6 +40,14 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\tousu.png"
     },
     {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\refresh.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\refresh.png"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\choosen.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\choosen.xml"
+    },
+    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\spilt_line_vertical.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\spilt_line_vertical.png"
     },
@@ -48,44 +56,36 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\check_my_stops_lease_status.png"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\choosen.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\choosen.xml"
-    },
-    {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\refresh.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\refresh.png"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\male_false.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\male_false.png"
-    },
-    {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\welcome.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\welcome.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fillet_button.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\fillet_button.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\findpassword_title.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\findpassword_title.png"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\welcome.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\welcome.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_point.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\icon_point.png"
     },
     {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\findpassword_title.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\findpassword_title.png"
+    },
+    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\home_true.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\home_true.png"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dp_switcher_homepage.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\dp_switcher_homepage.xml"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\goback1.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\goback1.png"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\dp_switcher_homepage.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\dp_switcher_homepage.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wait_save.png",
@@ -104,12 +104,12 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\mei.png"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\indicator_bg_bottom.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\Estate\\library\\unspecified\\res\\drawable\\indicator_bg_bottom.xml"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\choosen_bottom_false.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\choosen_bottom_false.png"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\indicator_bg_bottom.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\Estate\\library\\unspecified\\res\\drawable\\indicator_bg_bottom.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\female_false.png",
@@ -120,32 +120,32 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\building_unlock_true.png"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\choice.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\choice.png"
-    },
-    {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_ab_holo_dark.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\drawable\\abc_spinner_ab_holo_dark.xml"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\imagebutton.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\imagebutton.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\shapeline.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\shapeline.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\imagebutton.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\imagebutton.xml"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_spinner_ab_holo_dark.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\drawable\\abc_spinner_ab_holo_dark.xml"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\choice.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\choice.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\go.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\go.png"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\submit.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\submit.png"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\verification.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\verification.png"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\submit.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\submit.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_dark.xml",
@@ -156,12 +156,12 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\drawable\\abc_tab_indicator_ab_holo.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wifi_unlock_garden_pressed.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\wifi_unlock_garden_pressed.png"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\star_false.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\star_false.png"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wifi_unlock_garden_pressed.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\wifi_unlock_garden_pressed.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\my_stops_listitem_click_selector.xml",
@@ -172,16 +172,16 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\star_half_false.png"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\forget_password.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\forget_password.png"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\guanjiatitle.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\guanjiatitle.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\mypropretyt.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\mypropretyt.png"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\guanjiatitle.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\guanjiatitle.png"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\forget_password.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\forget_password.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_list_selector_holo_light.xml",
@@ -192,24 +192,24 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\textview1.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_error.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\icon_error.png"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\pay.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\pay.png"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_error.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\icon_error.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fanhui.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\fanhui.png"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_searchview_right_holo_light.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\drawable\\abc_textfield_searchview_right_holo_light.xml"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\home.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\home.xml"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_searchview_right_holo_light.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\drawable\\abc_textfield_searchview_right_holo_light.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\opendoor2.png",
@@ -228,24 +228,24 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\yunpass.png"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\switch_true.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\switch_true.png"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\resetpassword_title.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\resetpassword_title.png"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\switch_true.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\switch_true.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\relative_layout_background.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\relative_layout_background.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\guanjia_false.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\guanjia_false.png"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\icon_empty.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\icon_empty.png"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\guanjia_false.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\guanjia_false.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_textfield_searchview_holo_light.xml",
@@ -272,32 +272,32 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\myrepair_title.png"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\data.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\data.png"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\unlock_garden.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\unlock_garden.png"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\data.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\data.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\textview.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\textview.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\female_true.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\female_true.png"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\sqare.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\sqare.png"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\home_false.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\home_false.png"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\female_true.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\female_true.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\car_unlock_true.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\car_unlock_true.png"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\home_false.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\home_false.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\bg_edittext.xml",
@@ -316,12 +316,12 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\gonggao_title.png"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\square_button.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\square_button.xml"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\textview3.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\textview3.xml"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\square_button.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\square_button.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\add_picture.png",
@@ -344,12 +344,12 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\choosen_bottom_true.png"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\complair.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\complair.png"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\radiopressed6.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\radiopressed6.xml"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\complair.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\complair.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\zhuce_title.png",
@@ -468,12 +468,12 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\low_open_false.png"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\star_true.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\star_true.png"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\fillet_button1.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\fillet_button1.xml"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\star_true.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\star_true.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\name.png",
@@ -544,12 +544,12 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\guang_gao.png"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_search_dropdown_dark.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\drawable\\abc_search_dropdown_dark.xml"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\my_stop_top_deco.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\my_stop_top_deco.png"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_search_dropdown_dark.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\drawable\\abc_search_dropdown_dark.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\check_my_stops.png",
@@ -592,12 +592,12 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\opendoor1_false.png"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wifi_unlock_garden.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\wifi_unlock_garden.png"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\edittext_focused.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\edittext_focused.xml"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\wifi_unlock_garden.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\wifi_unlock_garden.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\zuce.png",
@@ -624,16 +624,16 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\radiopressed5.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\female.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\female.xml"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_holo_light.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\drawable\\abc_ic_clear_holo_light.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\radiopressed.xml",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\radiopressed.xml"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\abc_ic_clear_holo_light.xml",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\19.1.0\\res\\drawable\\abc_ic_clear_holo_light.xml"
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\female.xml",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\female.xml"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\indicator_bg_top.xml",
@@ -644,12 +644,12 @@
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\exit.png"
     },
     {
-        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\you.png",
-        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\you.png"
-    },
-    {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\message.png",
         "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\message.png"
+    },
+    {
+        "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\you.png",
+        "source": "G:\\git-cloned-projects\\Estate\\app\\src\\main\\res\\drawable\\you.png"
     },
     {
         "merged": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\drawable\\ic_menu_delete.png",
