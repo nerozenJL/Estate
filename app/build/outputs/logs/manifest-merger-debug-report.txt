@@ -22,13 +22,13 @@ ADDED from D:\AndroidProjects\Estate\Estate\app\src\main\AndroidManifest.xml:8:5
 MERGED from [com.android.support:appcompat-v7:19.1.0] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\AndroidManifest.xml:18:5-42
 MERGED from [Estate:logCollector:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\Estate\logCollector\unspecified\AndroidManifest.xml:7:5-9:41
 MERGED from [Estate:library:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\Estate\library\unspecified\AndroidManifest.xml:7:5-9:40
-MERGED from [com.android.volley:volley:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\com.android.volley\volley\unspecified\AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:Estate-volley:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\com.android.volley\Estate-volley\unspecified\AndroidManifest.xml:7:5-43
 MERGED from [Estate:myvolleyrequestlib:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\Estate\myvolleyrequestlib\unspecified\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.volley:volley:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\com.android.volley\volley\unspecified\AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:Estate-volley:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\com.android.volley\Estate-volley\unspecified\AndroidManifest.xml:7:5-43
 MERGED from [Estate:casloginprocess:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\Estate\casloginprocess\unspecified\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.volley:volley:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\com.android.volley\volley\unspecified\AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:Estate-volley:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\com.android.volley\Estate-volley\unspecified\AndroidManifest.xml:7:5-43
 MERGED from [Estate:myvolleyrequestlib:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\Estate\myvolleyrequestlib\unspecified\AndroidManifest.xml:7:5-9:41
-MERGED from [com.android.volley:volley:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\com.android.volley\volley\unspecified\AndroidManifest.xml:7:5-43
+MERGED from [com.android.volley:Estate-volley:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\com.android.volley\Estate-volley\unspecified\AndroidManifest.xml:7:5-43
 	android:targetSdkVersion
 		ADDED from D:\AndroidProjects\Estate\Estate\app\src\main\AndroidManifest.xml:10:9-38
 		INJECTED from D:\AndroidProjects\Estate\Estate\app\src\main\AndroidManifest.xml
@@ -142,13 +142,13 @@ application
 ADDED from D:\AndroidProjects\Estate\Estate\app\src\main\AndroidManifest.xml:39:5-204:19
 MERGED from [com.android.support:appcompat-v7:19.1.0] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\AndroidManifest.xml:19:5-20
 MERGED from [Estate:library:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\Estate\library\unspecified\AndroidManifest.xml:11:5-20
-MERGED from [com.android.volley:volley:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\com.android.volley\volley\unspecified\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:Estate-volley:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\com.android.volley\Estate-volley\unspecified\AndroidManifest.xml:9:5-20
 MERGED from [Estate:myvolleyrequestlib:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\Estate\myvolleyrequestlib\unspecified\AndroidManifest.xml:11:5-15:19
-MERGED from [com.android.volley:volley:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\com.android.volley\volley\unspecified\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:Estate-volley:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\com.android.volley\Estate-volley\unspecified\AndroidManifest.xml:9:5-20
 MERGED from [Estate:casloginprocess:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\Estate\casloginprocess\unspecified\AndroidManifest.xml:11:5-15:19
-MERGED from [com.android.volley:volley:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\com.android.volley\volley\unspecified\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:Estate-volley:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\com.android.volley\Estate-volley\unspecified\AndroidManifest.xml:9:5-20
 MERGED from [Estate:myvolleyrequestlib:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\Estate\myvolleyrequestlib\unspecified\AndroidManifest.xml:11:5-15:19
-MERGED from [com.android.volley:volley:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\com.android.volley\volley\unspecified\AndroidManifest.xml:9:5-20
+MERGED from [com.android.volley:Estate-volley:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\com.android.volley\Estate-volley\unspecified\AndroidManifest.xml:9:5-20
 	android:supportsRtl
 		ADDED from [Estate:myvolleyrequestlib:unspecified] D:\AndroidProjects\Estate\Estate\app\build\intermediates\exploded-aar\Estate\myvolleyrequestlib\unspecified\AndroidManifest.xml:14:9-35
 	android:label
