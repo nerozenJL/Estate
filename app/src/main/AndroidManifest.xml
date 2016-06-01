@@ -160,9 +160,9 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
 
-        <!--<service-->
-            <!--android:name="com.uestc.bluetooth.BluetoothLeService"-->
-            <!--android:enabled="true" />-->
+        <!-- <service -->
+        <!-- android:name="com.uestc.bluetooth.BluetoothLeService" -->
+        <!-- android:enabled="true" /> -->
 
         <activity
             android:name=".SetPasswordActivity"
@@ -174,10 +174,9 @@
                 <action android:name="com.example.broadcastpractice.FORCE_OFFLINE" />
             </intent-filter>
         </receiver>
-
         <receiver android:name="com.uestc.BroadcastReceivers.AutoConnectWiFiBroadcastReceiver">
             <intent-filter>
-                <action android:name="AUTO_UPDATE_IDEAL_WIFI"/>
+                <action android:name="AUTO_UPDATE_IDEAL_WIFI" />
             </intent-filter>
         </receiver>
 
@@ -200,7 +199,14 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".ShopActivity"></activity>
+        <activity android:name=".ShopActivity" />
+
+        <activity android:name=".MyStopActivity" />
+
+        <!--查看历史纪录Activity，我使用了toolbar的实现方式.第一次使用，可能会留坑，见谅~~ By Nero-->
+        <activity
+            android:name=".CheckMyStopLeaseHistory"
+            android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>
     </application>
 
 </manifest>

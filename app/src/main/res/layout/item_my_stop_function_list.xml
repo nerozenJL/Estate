@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--我的车位界面中，功能选择列表一个单元的布局-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="10dp"
+    android:paddingBottom="8dp"
+    android:listSelector="@drawable/my_stops_listitem_click_selector">
+
+    <!--图标-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:id="@+id/my_stop_function_list_item_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <!--功能名称-->
+    <LinearLayout
+        android:layout_marginLeft="5dp"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5">
+        <TextView
+            android:id="@+id/my_stop_function_list_item_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:layout_gravity="center_vertical|left"/>
+    </LinearLayout>
+
+</LinearLayout>

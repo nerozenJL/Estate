@@ -74,5 +74,6 @@ public class Session {
 	public static void addMemberToAccessableBTSsidList(BluetoothProtalInfo newMember){
 		accessableBlueToothSsidList.add(newMember);
 	}
-	
+
+
 }

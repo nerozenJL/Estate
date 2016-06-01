@@ -22,6 +22,7 @@ dependencies {
     compile 'com.android.support:support-v4:19.1.0'
     compile 'com.google.code.gson:gson:2.3.1'
     compile 'com.android.support:appcompat-v7:19.1.0'
+    //compile 'com.android.support:appcompat-v7:19+'
     compile files('libs/alipaysdk.jar')
     compile files('libs/alipaysecsdk.jar')
     compile files('libs/alipayutdid.jar')
@@ -33,7 +34,7 @@ dependencies {
     compile files('libs/UPPayAssistEx.jar')
     compile project(':logCollector')
     compile project(':library')
-    compile project(':volley')
+    compile project(':Estate-volley')
     compile project(':myvolleyrequestlib')
     compile project(':casloginprocess')
 }

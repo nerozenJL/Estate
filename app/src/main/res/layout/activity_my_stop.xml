@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/write"
+    android:orientation="vertical"
+    tools:context=".MyStopActivity">
+
+    <!--顶部背景图片,标题，返回按钮-->
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/my_stop_top_linearlayout"
+        android:orientation="vertical"
+        android:background="#f2845b">
+
+        <!--顶部导航栏-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:id="@+id/my_stop_navigate_bar"
+            android:orientation="horizontal">
+
+            <!--返回按钮-->
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#00000000">
+
+                <ImageButton
+                    android:id="@+id/back_from_my_stop_activity"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back_from_my_stops"/>
+
+            </LinearLayout>
+
+            <!--标题-->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="8"
+                android:gravity="center"
+                android:id="@+id/my_stop_title"
+                android:textColor="@color/white2"
+                android:textSize="20sp"
+                android:text="我的车位"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--中间的图示背景-->
+        <LinearLayout
+            android:id="@+id/my_stop_background"
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2">
+
+            <!--居中显示deco图标-->
+            <ImageView
+                android:id="@+id/my_stop_top_deco_imageview"
+                android:background="@drawable/my_stop_top_deco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!--功能列表-->
+    <LinearLayout
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:id="@+id/my_stop_body_function_list_linearlayout"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/my_stop_function_list"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:listSelector="@drawable/my_stops_listitem_click_selector">
+        </ListView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#CCCCCC">
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--底部布局，暂无用处-->
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/my_stop_bottom_linearlayout"
+        android:orientation="vertical">
+
+    </LinearLayout>-->
+
+</LinearLayout>
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.uestc.ui.activity.MyStopActivity">
+</RelativeLayout>-->

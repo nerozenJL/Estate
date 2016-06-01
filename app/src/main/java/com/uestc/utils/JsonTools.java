@@ -37,8 +37,7 @@ public class JsonTools {
 					list.add(announcement);
 				}
 			} else {
-				getAnnouncementData.setDescription(jsonObject
-						.getString("description"));
+				getAnnouncementData.setDescription(jsonObject.getString("description"));
 			}
 
 		} catch (Exception e) {
@@ -48,6 +47,4 @@ public class JsonTools {
 
 		return getAnnouncementData;
 	}
-
-
 }

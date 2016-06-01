@@ -24,4 +24,7 @@
     <color name="wifi_open_pressed">#d35400</color>
     <color name="wifi_open_unpressed">#e67d21</color>
     <color name="rb_unpressed">#6E7682</color>
+
+    <color name="my_stop_theme_orange">#f2845b</color>
+
 </resources>

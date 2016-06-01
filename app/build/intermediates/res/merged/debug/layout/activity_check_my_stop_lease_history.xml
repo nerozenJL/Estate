@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/write"
+    android:orientation="vertical"
+    tools:context=".CheckMyStopLeaseHistory">
+
+    <!--顶部导航栏-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:orientation="horizontal"
+        android:background="@color/my_stop_theme_orange">
+
+        <!--返回按钮-->
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#00000000">
+
+            <ImageButton
+                android:id="@+id/back_from_my_lease_history"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/back_from_my_stops"/>
+
+        </LinearLayout>
+
+        <!--标题-->
+        <TextView
+            android:paddingTop="5dp"
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:textColor="@color/write"
+            android:textSize="20sp"
+            android:text="车位租用记录"/>
+
+        <!--对称布局块，为了让标题居中的冗余布局-->
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#00000000">
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--顶部的可选条-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/my_stop_theme_orange"
+        android:orientation="horizontal">
+
+        <!--订单详情选项卡-->
+        <LinearLayout
+            android:id="@+id/check_lease_order_tab_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom"
+            android:layout_weight="1"
+            android:paddingLeft="40dp"
+            android:paddingRight="20dp">
+
+            <TextView
+                android:paddingTop="10dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="bottom"
+                android:textSize="16sp"
+                android:textColor="@color/write"
+                android:text="订单详情"/>
+
+        </LinearLayout>
+
+        <!--收益详情选项卡-->
+        <LinearLayout
+            android:id="@+id/check_lease_income_tab_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:paddingLeft="40dp"
+            android:paddingRight="2dp">
+
+            <TextView
+                android:paddingTop="10dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal|bottom"
+                android:textSize="16sp"
+                android:textColor="@color/write"
+                android:text="收益一览"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--和选项卡联动的viewpager-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/top_tab_viewpagers_lease_history"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.uestc.ui.activity.CheckMyStopLeaseHistory">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_width="match_parent">
+    </android.support.v7.widget.Toolbar>
+
+</RelativeLayout>-->
