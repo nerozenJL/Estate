@@ -14,6 +14,11 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.android.volley.Request;
+import com.android.volley.Response;
+import com.example.jacoblong.myvolleyrequestlib.BasicErrorListener;
+import com.example.jacoblong.myvolleyrequestlib.BasicRequest;
+import com.example.jacoblong.myvolleyrequestlib.RequestManager;
 import com.example.nerozen.casloginprocess.CASLoginProxy;
 import com.example.nerozen.casloginprocess.GardenInfoList;
 import com.uestc.BroadcastReceivers.AutoConnectWiFiBroadcastReceiver;
@@ -30,6 +35,7 @@ import com.uestc.domain.WiFiProtalInfo;
 import com.uestc.utils.ConfigurationFilesAdapter;
 import com.uestc.utils.HttpUtils;
 import com.uestc.utils.JsonTools;
+import com.uestc.utils.ResponseJsonParser;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -46,6 +52,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Properties;
 import java.util.concurrent.ExecutionException;
 
@@ -61,6 +68,10 @@ public class DetectAutoLoginActivity extends Activity {
     private String passWord;
     private String autoLoginConfigFilePath = "/data/data/com.znt.estate/autologinconfig.properties";
     private ImageView appCoverImageView;
+
+    private Object subsequentloginCounterLock = new Object();
+    private int SubsequentLoginSchedule = 0; //后续登录有多个请求，使用volley的异步请求，需要在主线程做一个计数，当请求成功或失败时都进行记录
+    //配套做个mhandler，完成之后通知这个handler做页面跳转
 
     /*2016-5-25*/
     protected CASLoginProxy casLoginProxy = new CASLoginProxy(DetectAutoLoginActivity.this);
@@ -132,17 +143,6 @@ public class DetectAutoLoginActivity extends Activity {
                     case CASLoginProxy.CAS_ACTIVATE_HOST_SESSION_SUCCESS:
                         Log.d("CAS", "CAS Injection Session Success");
                         break;
-                    case CASLoginProxy.CAS_AUTHENTICATION_SUCCESS:
-                        Log.d("CAS", "CAS Authentication Success");
-                        /*Toast.makeText(DetectAutoLoginActivity.this, "登录成功", Toast.LENGTH_SHORT).show();
-                        try {
-                            Thread.sleep(1000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }*/
-                        /*JumpToHomeActivity();*/
-                        //后续的基本数据请求
-                        break;
                 }
             }
             if(intent.getAction().equals(CASLoginProxy.CAS_DATA_TRANSITION_HOSTINFO_MAP_BROADCAST_ACTION)) {
@@ -153,11 +153,47 @@ public class DetectAutoLoginActivity extends Activity {
             }
             if(intent.getAction().equals(CASLoginProxy.CAS_DATA_TRANSITION_HOSTSESSION_BRAODCAST_ACTION)) {
                 Session.seesion = intent.getStringExtra(CASLoginProxy.EXTRA_KEY_DATA_TRANSITION_HOST_SESSION);
-                //Session.DynamicSetAPIS();
                 //subsequentLoginRequest()
             }
         }
     };
+
+    /*后续登陆操作*/
+    private void SubsequentLogin() {
+        //不如用volley写吧
+        //需要getrole，getsecrets，get公告，get商店预览图片，get物管电话
+        Map<String, String> map = new HashMap<String, String>();
+        map.put("Cookie", Session.seesion);
+        BasicErrorListener errorListener = new BasicErrorListener() {
+        };
+        Response.Listener<String> getRoleListener = new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    int maxRole = new ResponseJsonParser().ParseRolePority(response);
+                    if(maxRole == ResponseJsonParser.JSON_STATUS_FALSE) {
+                        //status == false;
+
+                    }
+                    Session.role = maxRole;
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+        RequestManager.getInstance(DetectAutoLoginActivity.this).addRequest(new BasicRequest(Request.Method.GET, Host.getRole,
+                getRoleListener, errorListener));
+        Response.Listener<String> getSecretsListener = new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try {
+                    new ResponseJsonParser().ParseControllerSecretList(response);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        };
+    }
 
     private void JumpToLoginActivity() {
         Intent intent = new Intent(DetectAutoLoginActivity.this, LoginActivity.class);
@@ -176,7 +212,6 @@ public class DetectAutoLoginActivity extends Activity {
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(CASLoginProxy.CAS_ERROR_BROADCAST_ACTION);
         intentFilter.addAction(CASLoginProxy.CAS_SUCCESS_BROADCAST_ACTION);
-        //intentFilter.addAction(CASLoginProxy.CAS_DATA_TRANSITION_BROADCAST_ACTION);
         intentFilter.addAction(CASLoginProxy.CAS_DATA_TRANSITION_HOSTINFO_MAP_BROADCAST_ACTION);
         intentFilter.addAction(CASLoginProxy.CAS_DATA_TRANSITION_HOSTSESSION_BRAODCAST_ACTION);
         DetectAutoLoginActivity.this.registerReceiver(CASBroadcastReceiver, intentFilter);
@@ -184,7 +219,6 @@ public class DetectAutoLoginActivity extends Activity {
 
     public void setIsAutoLoginExpected(boolean isAutoLoginExpected) {
         IsAutoLoginExpected = isAutoLoginExpected;
-
     }
 
     private boolean IsAutoLoginExpected;
@@ -218,15 +252,18 @@ public class DetectAutoLoginActivity extends Activity {
         Bitmap appCoverBitmap = MyBitmapFactory.decodeRawBitMap(is);
         appCoverImageView.setImageBitmap(appCoverBitmap);
 
+        Intent intent = new Intent(DetectAutoLoginActivity.this, CheckMyStopLeaseHistory.class);
+        startActivity(intent);
+
         /*new DetectAutoLoginTask().execute();*/ //开始自动登录活动的线程
 
         /*for(int i = 0; i < 10; i++) {
             new ConfigurationFilesAdapter().SetOrUpdateProperty(autoLoginConfigFilePath, "userName", "18680237011");
         }*/
 
-        BindCASReceiver(); //注册并启动CAS广播接收者
+        /*BindCASReceiver(); //注册并启动CAS广播接收者
 
-        new CASLoginProxy(DetectAutoLoginActivity.this).CASLogin("18680237011", "1234567");
+        new CASLoginProxy(DetectAutoLoginActivity.this).CASLogin("18680237011", "1234567");*/
         /*
         * 该Activity不作交互组件使用，可以增添一个类似App封面的背景，并添加线程做登录操作
         */
@@ -481,12 +518,9 @@ public class DetectAutoLoginActivity extends Activity {
                 if(getAnnouncementData == null){
                     TempStaticInstanceCollection.announcementList.setStatus(false);
                 }
-                GetAnnouncementData a = TempStaticInstanceCollection.announcementList;
-                GetAnnouncementData b = TempStaticInstanceCollection.announcementList;
             } else {
                 //Log.v("notify failed", "获取公告失败");
                 TempStaticInstanceCollection.announcementList = new GetAnnouncementData();
-
             }
         }
     }
