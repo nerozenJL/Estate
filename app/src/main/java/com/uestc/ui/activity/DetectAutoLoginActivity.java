@@ -3,12 +3,14 @@ package com.uestc.ui.activity;
 import android.app.Activity;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Window;
 import android.widget.ImageView;
@@ -16,6 +18,7 @@ import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
+import com.android.volley.VolleyError;
 import com.example.jacoblong.myvolleyrequestlib.BasicErrorListener;
 import com.example.jacoblong.myvolleyrequestlib.BasicRequest;
 import com.example.jacoblong.myvolleyrequestlib.RequestManager;
@@ -32,11 +35,13 @@ import com.uestc.domain.Secret;
 import com.uestc.domain.Session;
 import com.uestc.domain.TempStaticInstanceCollection;
 import com.uestc.domain.WiFiProtalInfo;
+import com.uestc.ui.dialog.ListViewDialog;
 import com.uestc.utils.ConfigurationFilesAdapter;
 import com.uestc.utils.HttpUtils;
 import com.uestc.utils.JsonTools;
 import com.uestc.utils.ResponseJsonParser;
 
+import org.apache.http.protocol.RequestExpectContinue;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -61,27 +66,297 @@ import java.util.concurrent.ExecutionException;
  * 1.作为应用启动项，先检查自动登录配置文件是否存有自动登录信息；
  * 2.如果存在，则直接进行登录操作，登录成功跳转到首页
  * 3.如果登录失败或没有自动登录配置，则跳转到登录界面
+ *
+ * 4.实现CAS登录流程
+ * 5.使用volley框架进行网络请求
  */
 public class DetectAutoLoginActivity extends Activity {
+    private String gardenDBName = null, gardenHostName = null; //用户选中的园区名和数据库名
 
-    private String userName;
-    private String passWord;
-    private String autoLoginConfigFilePath = "/data/data/com.znt.estate/autologinconfig.properties";
-    private ImageView appCoverImageView;
+    private Object volley_count_lock = new Object(); //互斥增加volley响应数
+    private int volley_count;//记录volley请求完成的个数，所有请求完成之后，进行主业跳转
 
-    private Object subsequentloginCounterLock = new Object();
-    private int SubsequentLoginSchedule = 0; //后续登录有多个请求，使用volley的异步请求，需要在主线程做一个计数，当请求成功或失败时都进行记录
-    //配套做个mhandler，完成之后通知这个handler做页面跳转
+    private final String autoLoginConfigFilePath = "/data/data/com.znt.estate/autologinconfig.properties";
 
-    /*2016-5-25*/
+    private ImageView appCoverImageView; //过渡界面的背景
+
+    /*后续登陆操作,使用volley并发请求的方法*/
+    private void SubsequentLogin() {
+        //不如用volley写吧
+        //需要getrole，getsecrets，get公告，get商店预览图片，get物管电话
+        Map<String, String> header = new HashMap<String, String>();
+        header.put("Cookie", Session.seesion);
+        volley_count = 0;
+        VolleyGetRole(header);
+        VolleyGetSecret(header);
+        VolleyGetNotify(header);
+        VolleyGetStorePreview(header);
+        VolleyGetPMphonenumber(header);
+    }
+    private void VolleyGetRole(Map header) {
+        BasicErrorListener errorListener = new BasicErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                super.onErrorResponse(error);
+                synchronized (volley_count_lock){
+                    volley_count++;
+                    if(volley_count >= 5) {
+                        JumpToHomeActivity();
+                    }
+                }
+            }
+        };
+        Response.Listener<String> getRoleListener = new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                try{
+                    JSONObject jsonObject = new JSONObject(response);
+                    if(jsonObject.getBoolean("status")) {
+                        String roles = jsonObject.getString("jsonString");
+                        int maxRole = 0;
+                        for (String roleString : Arrays.asList(roles.split(","))) {
+                            int role = Integer.parseInt(roleString);
+                            if (role > maxRole)
+                                maxRole = role;
+                        }
+                        Session.role = maxRole;
+                        synchronized (volley_count_lock){
+                            volley_count++;
+                            if(volley_count >= 5) {
+                                JumpToHomeActivity();
+                            }
+                        }
+                    }else {
+                        Session.role = -1;
+                    }
+                }catch (JSONException e) {
+                }
+            }
+        };
+        RequestManager.getInstance(getApplicationContext())
+                .addRequest(new BasicRequest(Request.Method.GET, Host.getRole, getRoleListener, errorListener, header));
+    }
+    private void VolleyGetSecret(Map header) {
+        BasicErrorListener errorListener = new BasicErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                super.onErrorResponse(error);
+                synchronized (volley_count_lock){
+                    volley_count++;
+                    if(volley_count >= 5) {
+                        JumpToHomeActivity();
+                    }
+                }
+            }
+        };
+        Response.Listener<String> getRoleListener = new Response.Listener<String>() {
+            int a;
+            @Override
+            public void onResponse(String response) {
+                try{
+                    JSONObject getSecretResult = new JSONObject(response);
+                    if (getSecretResult.getBoolean("status")) {
+                        //返回成功，将所有jsonstring进行解析
+                        JSONArray ssidArrayJson = getSecretResult.getJSONArray("jsonString");
+
+                        for (int index = 0; index < ssidArrayJson.length(); index++) {
+                            JSONObject singleSsidJsonObj = ssidArrayJson.getJSONObject(index);
+                            int type = singleSsidJsonObj.getInt("type");
+                            if (type == 2) {
+                                String ssid = singleSsidJsonObj.getString("symbol");
+                                String secret = singleSsidJsonObj.getString("secret");
+                                String password = singleSsidJsonObj.getString("password");
+                                WiFiProtalInfo singleWiFiProtalInfo = new WiFiProtalInfo(ssid, password, secret);
+                                Session.addMemberToAccessableWiFiSsidList(singleWiFiProtalInfo);
+                            } else if (type == 1) {
+                                String ssid = singleSsidJsonObj.getString("symbol");
+                                String secret = singleSsidJsonObj.getString("secret");
+                                BluetoothProtalInfo singleBTProtalInfo = new BluetoothProtalInfo(ssid, secret);
+                                Session.addMemberToAccessableBTSsidList(singleBTProtalInfo);
+                            }
+                        }
+                    }
+                    synchronized (volley_count_lock){
+                        volley_count++;
+                        if(volley_count >= 5) {
+                            JumpToHomeActivity();
+                        }
+                    }
+                }catch (JSONException e) {
+
+                }
+            }
+        };
+        RequestManager.getInstance(getApplicationContext()).
+                addRequest(new BasicRequest(Request.Method.GET, Host.getSecret, getRoleListener, errorListener, header));
+    }
+    private void VolleyGetNotify(Map header) {
+        BasicErrorListener errorListener = new BasicErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                super.onErrorResponse(error);
+                synchronized (volley_count_lock){
+                    volley_count++;
+                    if(volley_count >= 5) {
+                        JumpToHomeActivity();
+                    }
+                }
+            }
+        };
+        Response.Listener<String> getRoleListener = new Response.Listener<String>() {
+            @Override
+            public void onResponse(String getNotify) {
+                if (!getNotify.equals("")) {
+                    GetAnnouncementData getAnnouncementData = new GetAnnouncementData();
+                    getAnnouncementData = JsonTools.getAnnouncement(DetectAutoLoginActivity.this, "jsonString", getNotify);
+                    if (getAnnouncementData.isStatus()) {
+                        TempStaticInstanceCollection.announcementList = getAnnouncementData;
+                        if(getAnnouncementData == null){
+                            TempStaticInstanceCollection.announcementList.setStatus(false);
+                        }
+                    } else {
+                        //Log.v("notify failed", "获取公告失败");
+                        TempStaticInstanceCollection.announcementList = new GetAnnouncementData();
+                    }
+                }
+                synchronized (volley_count_lock){
+                    volley_count++;
+                    if(volley_count >= 5) {
+                        JumpToHomeActivity();
+                    }
+                }
+            }
+        };
+        RequestManager.getInstance(getApplicationContext()).addRequest(new BasicRequest(Request.Method.GET, Host.getNotice1, getRoleListener, errorListener, header));
+    }
+    private void VolleyGetStorePreview(Map header) {
+        BasicErrorListener errorListener = new BasicErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                super.onErrorResponse(error);
+                synchronized (volley_count_lock){
+                    volley_count++;
+                    if(volley_count >= 5) {
+                        JumpToHomeActivity();
+                    }
+                }
+            }
+        };
+        Response.Listener<String> getRoleListener = new Response.Listener<String>() {
+            int a = 0;
+            @Override
+            public void onResponse(String getPics) {
+                List<URL> picsUrlList = new ArrayList<URL>();
+                if(!getPics.equals("")){
+                    try {
+                        JSONObject totalJson = new JSONObject(getPics);
+                        Map<String, JSONObject> map = new HashMap<String, JSONObject>(); //使用map记录每一条json
+
+                /*迭代初始化字符串-json映射图*/
+                        Iterator it = totalJson.keys();
+                        while(it.hasNext()){
+                            String key = String.valueOf(it.next());
+                            JSONObject value = (JSONObject)totalJson.get(key);
+                            map.put(key, value);
+                        }
+                        //遍历map，获取所有图片的url
+                        for(JSONObject values: map.values()){
+                            String url = values.getString("cover_pic");
+                            ADInfo adInfo = new ADInfo();
+                            adInfo.setUrl(url);
+                            TempStaticInstanceCollection.storePreviewInfo.add(adInfo);
+                        }
+                        TempStaticInstanceCollection.storePreviewInfo.get(0);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }else{
+                    //获取失败
+                    Log.v("getOnlineStorePictures", "获取商店预览图片失败");
+                }
+                synchronized (volley_count_lock){
+                    volley_count++;
+                    if(volley_count >= 5) {
+                        JumpToHomeActivity();
+                    }
+                }
+            }
+        };
+        RequestManager.getInstance(getApplicationContext())
+                .addRequest(new BasicRequest(Request.Method.GET, Host.getStorePreviewPictures, getRoleListener, errorListener, header));
+    }
+    private void VolleyGetPMphonenumber(Map header) {
+        BasicErrorListener errorListener = new BasicErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                super.onErrorResponse(error);
+                synchronized (volley_count_lock){
+                    volley_count++;
+                    if(volley_count >= 5) {
+                        JumpToHomeActivity();
+                    }
+                }
+            }
+        };
+        Response.Listener<String> getRoleListener = new Response.Listener<String>() {
+            int a;
+            @Override
+            public void onResponse(String getPhone) {
+                if(!getPhone.equals("")){
+                    JSONObject jsonObject = null;
+                    JSONArray phoneJsonArray = null;
+                    try {
+                        jsonObject = new JSONObject(getPhone);
+                        phoneJsonArray = jsonObject.getJSONArray("jsonString");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    try {
+                        for(int index = 0; index < phoneJsonArray.length(); index++){
+                            JSONObject single = phoneJsonArray.getJSONObject(0);
+                            String phone = single.getString("phone");
+                            TempStaticInstanceCollection.propertyManagerCompanyPhoneNumberList.add(phone);
+                        }
+                        TempStaticInstanceCollection.propertyManagerCompanyPhoneNumberList.get(0);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }else{
+                    //获取失败
+                    //Toast.makeText(this, "获取物管电话失败", Toast.LENGTH_SHORT).show();
+                }
+                synchronized (volley_count_lock){
+                    volley_count++;
+                    if(volley_count >= 5) {
+                        JumpToHomeActivity();
+                    }
+                }
+            }
+        };
+        RequestManager.getInstance(getApplicationContext()).
+                addRequest(new BasicRequest(Request.Method.GET, Host.getPropertyManagerPhoneList, getRoleListener, errorListener, header));
+    }
+
+    private void JumpToLoginActivity() {
+        Intent intent = new Intent(DetectAutoLoginActivity.this, LoginActivity.class);
+        startActivity(intent);
+        this.finish();
+    }
+    private void JumpToHomeActivity() {
+        Intent intent = new Intent(DetectAutoLoginActivity.this, HomeActivity.class);
+        startActivity(intent);
+        this.finish();
+    }
+
+    /*2016-5-25 CAS登录代理类，完成登录流程*/
     protected CASLoginProxy casLoginProxy = new CASLoginProxy(DetectAutoLoginActivity.this);
-
+    /*2016-6-3，CAS登录流程中反馈信息的广播处理*/
     protected BroadcastReceiver CASBroadcastReceiver = new BroadcastReceiver() {
         int a = 1;
         @Override
         public void onReceive(Context context, Intent intent) {
             if(intent.getAction().equals(CASLoginProxy.CAS_ERROR_BROADCAST_ACTION)) {
-                //登陆过程中 出错
+                //登陆过程中 出错的情况
                 switch(intent.getIntExtra("errorInfo", -1)) {
                     case CASLoginProxy.CAS_AUTHENTICATION_FAILED_USER_INFO_INVALID:
                         //用户名或密码错误
@@ -138,7 +413,7 @@ public class DetectAutoLoginActivity extends Activity {
                 //阶段成功反馈
                 switch (intent.getIntExtra("errorInfo", -1)) {
                     case -1:default:
-                        Log.d("logical error", "CAS broadcast logical bug"); //代码逻辑有bug
+                        Log.d("logical error", "CAS broadcast logical bug"); //跑到这里说明代码逻辑有bug
                         break;
                     case CASLoginProxy.CAS_ACTIVATE_HOST_SESSION_SUCCESS:
                         Log.d("CAS", "CAS Injection Session Success");
@@ -147,67 +422,68 @@ public class DetectAutoLoginActivity extends Activity {
             }
             if(intent.getAction().equals(CASLoginProxy.CAS_DATA_TRANSITION_HOSTINFO_MAP_BROADCAST_ACTION)) {
                 //数据传输
-                GardenInfoList gardenHostMap = (GardenInfoList) intent.getParcelableExtra(CASLoginProxy.EXTRA_KEY_DATA_TRANSITION_GADEN_HOST_MAP);
-                GardenInfoList gardenDBnameMap = (GardenInfoList)intent.getParcelableExtra(CASLoginProxy.EXTRA_KEY_DATA_TRANSITION_GARDEN_DB_MAP);
-                //gardenInfoList.getGardenCertainInfoMap().keySet();
+                final GardenInfoList gardenHostMap = (GardenInfoList) intent.getParcelableExtra(CASLoginProxy.EXTRA_KEY_DATA_TRANSITION_GADEN_HOST_MAP);
+                final GardenInfoList gardenDBnameMap = (GardenInfoList)intent.getParcelableExtra(CASLoginProxy.EXTRA_KEY_DATA_TRANSITION_GARDEN_DB_MAP);
+                Session.gardenDBNameMap = gardenDBnameMap.getGardenCertainInfoMap();
+                Session.gardenHostMap = gardenHostMap.getGardenCertainInfoMap();
+                String hosturl = null;
+                String dbName = null;
+                boolean isAutoSelectedGardenLeagel = false;
+                for(String gardenName : gardenHostMap.getGardenCertainInfoMap().keySet()) {
+                    if(gardenName.equals(configdata.autoLoginGardenName)) {
+                        hosturl = gardenHostMap.getGardenCertainInfoMap().get(configdata.autoLoginGardenName);
+                        dbName = gardenDBnameMap.getGardenCertainInfoMap().get(configdata.autoLoginGardenName);
+                        isAutoSelectedGardenLeagel = true;
+                        break;
+                    }
+                }
+
+                //此处注意，如果用户选择了"记住我的选择"，先进行匹配(是否在园区列表里面，没有的话还是要再选一次)
+                if(configdata.isAutoSelectGarden && isAutoSelectedGardenLeagel) {
+                    casLoginProxy.ActivateHostSession(hosturl, dbName);
+                }else {
+                    //获得园区选择列表后，创建选择对话框，让用户进行选择
+                    final ListViewDialog.Builder builder = new ListViewDialog.Builder(DetectAutoLoginActivity.this);
+                    builder.setListItemName(gardenHostMap.getGardenCertainInfoMap());
+                    builder.setTitle("请选择登录园区");
+
+                    if(isAutoSelectedGardenLeagel) {
+                        builder.setDefaultListItem(configdata.autoLoginGardenName);
+                    }else {
+                        //builder.setDefaultListItem(0);
+                    }
+                    builder.setMultyChoosen(false);
+                    builder.setOnBackPressedListener(new ListViewDialog.OnBackPressedListener() {
+                        @Override
+                        public void onClick() {
+                            //do nothing
+                        }
+                    });
+                    builder.setOnConfirmButtonClickListner(new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            String key = builder.getKey();
+                            String hostUrl = gardenHostMap.getGardenCertainInfoMap().get(key);
+                            String dbName = gardenDBnameMap.getGardenCertainInfoMap().get(key);
+                            gardenHostName = hostUrl;
+                            gardenDBName = dbName;
+                            casLoginProxy.ActivateHostSession(hostUrl, dbName);
+                            dialog.dismiss();
+                        }
+                    });
+                    builder.create(0).show();
+                }
             }
-            if(intent.getAction().equals(CASLoginProxy.CAS_DATA_TRANSITION_HOSTSESSION_BRAODCAST_ACTION)) {
+
+            if(intent.getAction().equals(CASLoginProxy.CAS_DATA_TRANSITION_HOSTSESSION_BRAODCAST_ACTION)) { //园区JSESSION的传输
                 Session.seesion = intent.getStringExtra(CASLoginProxy.EXTRA_KEY_DATA_TRANSITION_HOST_SESSION);
-                //subsequentLoginRequest()
+                //动态改变所有请求
+                Host.DynamiclySetAPIs(gardenHostName, gardenDBName);
+                SubsequentLogin();
             }
         }
     };
-
-    /*后续登陆操作*/
-    private void SubsequentLogin() {
-        //不如用volley写吧
-        //需要getrole，getsecrets，get公告，get商店预览图片，get物管电话
-        Map<String, String> map = new HashMap<String, String>();
-        map.put("Cookie", Session.seesion);
-        BasicErrorListener errorListener = new BasicErrorListener() {
-        };
-        Response.Listener<String> getRoleListener = new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                try {
-                    int maxRole = new ResponseJsonParser().ParseRolePority(response);
-                    if(maxRole == ResponseJsonParser.JSON_STATUS_FALSE) {
-                        //status == false;
-
-                    }
-                    Session.role = maxRole;
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        };
-        RequestManager.getInstance(DetectAutoLoginActivity.this).addRequest(new BasicRequest(Request.Method.GET, Host.getRole,
-                getRoleListener, errorListener));
-        Response.Listener<String> getSecretsListener = new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                try {
-                    new ResponseJsonParser().ParseControllerSecretList(response);
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
-        };
-    }
-
-    private void JumpToLoginActivity() {
-        Intent intent = new Intent(DetectAutoLoginActivity.this, LoginActivity.class);
-        startActivity(intent);
-        this.finish();
-    }
-
-    private void JumpToHomeActivity() {
-        Intent intent = new Intent(DetectAutoLoginActivity.this, HomeActivity.class);
-        startActivity(intent);
-        this.finish();
-    }
-
-    /*定义CAS广播接收者需要接受的广播*/
+    /*绑定CAS广播接收者需要接受的广播*/
     private void BindCASReceiver() {
         IntentFilter intentFilter = new IntentFilter();
         intentFilter.addAction(CASLoginProxy.CAS_ERROR_BROADCAST_ACTION);
@@ -217,29 +493,70 @@ public class DetectAutoLoginActivity extends Activity {
         DetectAutoLoginActivity.this.registerReceiver(CASBroadcastReceiver, intentFilter);
     }
 
-    public void setIsAutoLoginExpected(boolean isAutoLoginExpected) {
-        IsAutoLoginExpected = isAutoLoginExpected;
+    private ConfigData configdata; //自动登录配置文件的信息
+    //配置数据
+    private class ConfigData {
+        public String autoLoginuserName, autoLoginpassword; //登录参数，用户名和密码
+        public String autoLoginGardenName; //多园区选择时候的首选园区，用户选择了"记住我的选择"才会用上
+        public int UnlockMode; //开锁模式，现有wifi和蓝牙
+        public boolean isAutoSelectGarden; //是否自动选择园区
+        public boolean isShakeUnlock; //是否摇一摇开锁自动开启
+        public boolean isAutoLogin; //是否要自动登录，到现在为止都没有用
+
+        public ConfigData(String filePath) {
+            if(!ReadLoginConfiguration(filePath)) {
+                isAutoLogin = false;
+            }
+        }
+
+        public ConfigData(Properties fileProperties) {
+        }
+
+        /*定义一个更健康的配置文件接口读取，把所有配置文件项全部读取出来*/
+        private boolean ReadLoginConfiguration(String loginConfigFilePath) {
+            boolean isRead = false;
+            //读取配置文件
+            Properties loginConfigProperties = new Properties();
+            try {
+                File loginConfigureFile = new File(autoLoginConfigFilePath);
+                if (loginConfigureFile.exists()){
+                    loginConfigureFile.createNewFile();
+                    return isRead;
+                } else {
+                    FileInputStream fs = new FileInputStream(loginConfigureFile);
+                    loginConfigProperties.load(fs);
+                    autoLoginuserName = loginConfigProperties.getProperty("userName"); //获取用户名
+                    autoLoginpassword = loginConfigProperties.getProperty("passWord"); //获取密码
+                    if(loginConfigProperties.getProperty("isAutoLoginExpected").equals("true")){ //是否需要自动登录
+                        isAutoLogin = true;
+                    }else {
+                        isAutoLogin = false;
+                    }
+                    if(loginConfigProperties.getProperty("preferredUnlockMethod").equals("WiFi")) { //默认开锁模式
+                        UnlockMode = 1; //WiFi开门
+                    }else if(loginConfigProperties.getProperty("preferredUnlockMethod").equals("Bluetooth")) {
+                        UnlockMode = 2; //蓝牙开门
+                    }
+                    if(loginConfigProperties.getProperty("isShakingAble").equals("true")){ //摇一摇开关是否开启
+                        isShakeUnlock = true;
+                    }else {
+                        isShakeUnlock = false;
+                    }
+                    if(loginConfigProperties.getProperty("isAutoSelectGarden").equals("true")) { //是否自动选择园区
+                        isAutoSelectGarden = true;
+                        autoLoginGardenName = loginConfigProperties.getProperty("GardenName");
+                    }else {
+                        isAutoSelectGarden = false;
+                        autoLoginGardenName = "";
+                    }
+                    isRead = true;
+                }
+            }catch (Exception e) {
+            }finally {
+                return isRead;
+            }
+        }
     }
-
-    private boolean IsAutoLoginExpected;
-
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public String getPassWord() {
-        return passWord;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    private boolean isGetSecretActivated, isGetRoleActivated;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -252,65 +569,33 @@ public class DetectAutoLoginActivity extends Activity {
         Bitmap appCoverBitmap = MyBitmapFactory.decodeRawBitMap(is);
         appCoverImageView.setImageBitmap(appCoverBitmap);
 
-        Intent intent = new Intent(DetectAutoLoginActivity.this, CheckMyStopLeaseHistory.class);
-        startActivity(intent);
 
-        /*new DetectAutoLoginTask().execute();*/ //开始自动登录活动的线程
+        /*Intent intent = new Intent(DetectAutoLoginActivity.this, CheckMyStopLeaseHistory.class);
+        startActivity(intent);*/
 
-        /*for(int i = 0; i < 10; i++) {
-            new ConfigurationFilesAdapter().SetOrUpdateProperty(autoLoginConfigFilePath, "userName", "18680237011");
-        }*/
-
-        /*BindCASReceiver(); //注册并启动CAS广播接收者
-
-        new CASLoginProxy(DetectAutoLoginActivity.this).CASLogin("18680237011", "1234567");*/
-        /*
-        * 该Activity不作交互组件使用，可以增添一个类似App封面的背景，并添加线程做登录操作
-        */
-    }
-
-    private class DetectAutoLoginTask extends AsyncTask<Void, Void, String> {
-
-        @Override
-        protected void onPostExecute(String result) {
-            if (result.equals("success")) {
-                Intent intentToHomeActivity = new Intent(DetectAutoLoginActivity.this, HomeActivity.class);
-                Intent appActivatedbroadcast = new Intent();
-                appActivatedbroadcast.setAction(AutoConnectWiFiBroadcastReceiver.AppActivatedBroadcast);
-
-                DetectAutoLoginActivity.this.sendBroadcast(appActivatedbroadcast);
-                startActivity(intentToHomeActivity);
-
-                finish();
-            } else {
-                Intent intentToLoginHomeActivity = new Intent(DetectAutoLoginActivity.this, LoginActivity.class);
-                startActivity(intentToLoginHomeActivity);
-                finish();
-            }
-        }
-
-        @Override
-        protected String doInBackground(Void... params) {
-            if (DetectAutoLogin()) {
-                try {
-                    Thread.currentThread().sleep(1500);//让封面展示3.5秒
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
+        /*new DetectAutoLoginTask().execute(); //开始自动登录活动的线程*/
+        configdata = new ConfigData(autoLoginConfigFilePath);
+        configdata.isAutoLogin = true;
+        configdata.autoLoginuserName = "18215598182";
+        configdata.autoLoginpassword = "123456";
+        if(configdata.isAutoLogin) {
+            BindCASReceiver(); //注册并启动CAS广播接收者
+            casLoginProxy.CASLogin(configdata.autoLoginuserName, configdata.autoLoginpassword);
+        }else {
+            //使用handler让线程睡眠1秒后进入登录界面
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                   JumpToLoginActivity();
                 }
-                return "success";
-
-            } else {
-                try {
-                    Thread.currentThread().sleep(1500);//让封面展示3.5秒
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-
-                return "failed";
-            }
+            }, 500);
         }
     }
 
+    /**
+     * 以下代码已经被弃用
+    * */
+    //private boolean IsAutoLoginExpected;
     /*判断配置文件是否存在，不存在会新增该配置文件*/
     private boolean IsAutoLoginConfigureFileExist(String strAutoLoginConfigureFile) {
         try {
@@ -326,7 +611,6 @@ public class DetectAutoLoginActivity extends Activity {
             return false;
         }
     }
-
     private boolean ReadSavedUserInfoToLoginInfo() {
         String configKey;
         Properties properties = new Properties();
@@ -348,22 +632,22 @@ public class DetectAutoLoginActivity extends Activity {
             e.printStackTrace();
             //return false;
         }
-        return this.IsAutoLoginExpected;
+        /*return this.IsAutoLoginExpected;*/
+        return false;
     }
-
     private void IdentifyConfigKeyAndAssignToReferredValue(String configKey, Properties autoLoginConfig) {
         if (configKey.equals("userName")) {
-            setUserName(autoLoginConfig.getProperty(configKey));
+            //setUserName(autoLoginConfig.getProperty(configKey));
             Person.setPhone(autoLoginConfig.getProperty(configKey));
         }
         if (configKey.equals("passWord")) {
-            setPassWord(autoLoginConfig.getProperty(configKey));
+            //setPassWord(autoLoginConfig.getProperty(configKey));
         }
         if (configKey.equals("isAutoLoginExpected")) {
             if (autoLoginConfig.getProperty(configKey).equals("true")) {
-                setIsAutoLoginExpected(true);
+                //setIsAutoLoginExpected(true);
             } else {
-                setIsAutoLoginExpected(false);
+                //setIsAutoLoginExpected(false);
             }
         }
 
@@ -385,7 +669,7 @@ public class DetectAutoLoginActivity extends Activity {
         }
         //日后可能会拓展配置项的key值
     }
-
+    /*非CAS登录流程的主函数，已废弃*/
     private boolean DetectAutoLogin() {
         /*
         * 检测自动登录的方法
@@ -425,7 +709,8 @@ public class DetectAutoLoginActivity extends Activity {
 
             /*获得记录的用户名和密码后，开始进行网络通信，与一般的用户登录流程一致*/
             //发送两次http请求，第一次是验证用户身份，第二次是获得用户的最高权限，完成后跳转
-            String loginResult = HttpUtils.HttpGet(DetectAutoLoginActivity.this, Host.login + "?phone=" + this.userName + "&password=" + this.passWord);
+            String loginResult = "";
+                    //HttpUtils.HttpGet(DetectAutoLoginActivity.this, Host.login + "?phone=" + this.userName + "&password=" + this.passWord);
             //此处使用了原版的http接口，在新一轮的迭代时要更换为volley或其他框架
             try {
                 JSONObject loginResultJsonParseString = new JSONObject(loginResult);
@@ -507,7 +792,7 @@ public class DetectAutoLoginActivity extends Activity {
         }
         return false;
     }
-
+    /*获取公告（非volley实现），已废弃*/
     private void GetOnlineNotifyList() {
         String getNotify = HttpUtils.HttpGet(DetectAutoLoginActivity.this, Host.getNotice1);
         if (!getNotify.equals("")) {
@@ -524,9 +809,7 @@ public class DetectAutoLoginActivity extends Activity {
             }
         }
     }
-
-
-    /*2016/4/6获取看板图片*/
+    /*2016/4/6获取看板图片（非volley实现），已废弃*/
     private void GetStorePreviewPictures(){
         String getPics = HttpUtils.HttpGet(this, Host.getStorePreviewPictures);
         List<URL> picsUrlList = new ArrayList<URL>();
@@ -558,8 +841,7 @@ public class DetectAutoLoginActivity extends Activity {
             Log.v("getOnlineStorePictures", "获取商店预览图片失败");
         }
     }
-
-    /*2016/4/7获取物管电话*/
+    /*2016/4/7获取物管电话（非volley实现），已废弃*/
     private void GetPropertyManagementCompanyPhone(){
         String getPhone = HttpUtils.HttpGet(DetectAutoLoginActivity.this, Host.getPropertyManagerPhoneList);
         /*getPhone = "\"status\":true,\"errorMsg\":{\"code\":null,\"description\":null},\"jsonString\":{}"*/;
@@ -592,5 +874,6 @@ public class DetectAutoLoginActivity extends Activity {
         }
     }
 }
+
 
 

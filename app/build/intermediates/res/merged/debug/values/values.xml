@@ -82,11 +82,13 @@
     <color name="gray1">#808080</color>
     <color name="gray2">#f5f5f5</color>
     <color name="green">#98FB98</color>
+    <color name="grey2">#FCFCFC</color>
     <color name="lavenderblush">#FFF0F5</color>
     <color name="lightgray">#f5f5f5</color>
     <color name="lightsalmon">#FFA07A</color>
     <color name="mediumseagreen">#3CB371</color>
     <color name="my_stop_theme_orange">#f2845b</color>
+    <color name="my_stop_theme_selected_orange">#f1bb91</color>
     <color name="or">#FF7F2B</color>
     <color name="rb_unpressed">#6E7682</color>
     <color name="red">#FF0000</color>
@@ -234,6 +236,7 @@
     <string name="girl">女</string>
     <string name="group_buying_online">在线团购</string>
     <string name="hello">您好！</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hello_world">Hello world!</string>
     <string name="hint_emergency_contact">紧急联系人</string>
     <string name="hint_emergency_contact_phone">紧急联系电话</string>

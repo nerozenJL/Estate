@@ -23,9 +23,9 @@ dependencies {
     testCompile 'junit:junit:4.12'
     /*compile 'com.android.support:appcompat-v7:23.2.1'*/ /*因为sdk版本问题，删掉这一行依赖，反正也用不上*/
     compile project(':Estate-volley')
-<<<<<<< HEAD
-    compile files('libs/jsoup-1.8.3.jar')
-=======
+/*<<<<<<< HEAD*/
     //compile files('libs/jsoup-1.8.3.jar')
->>>>>>> master
+/*=======*/
+    //compile files('libs/jsoup-1.8.3.jar')
+/*>>>>>>> master*/
 }

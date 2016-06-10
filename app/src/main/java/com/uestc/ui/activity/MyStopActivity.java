@@ -49,6 +49,9 @@ public class MyStopActivity extends ActionBarActivity {
                     case 0:
                         Toast.makeText(MyStopActivity.this, "haha", Toast.LENGTH_SHORT).show();
                         break;
+                    case 3:
+                        JumpToLeasHistory();
+                        break;
                 }
             }
         });
@@ -86,26 +89,6 @@ public class MyStopActivity extends ActionBarActivity {
                 functionListItemView.imageView = (ImageView) convertView.findViewById(R.id.my_stop_function_list_item_icon);
                 functionListItemView.textView = (TextView)convertView.findViewById(R.id.my_stop_function_list_item_text);
                 convertView.setTag(functionListItemView);
-                /*convertView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        switch(position) { //利用传进来的position表明按到的到底是哪个功能选项
-                            case 0:
-                                //Toast.makeText(MyStopActivity.this, "查看车位信息", Toast.LENGTH_SHORT).show();
-                                JumpToMyStopsInfo();
-                                break;
-                            case 1:
-                                JumpToStopsLeaseStatus();
-                                break;
-                            case 2:
-                                JumpToSetExceptionStragety();
-                                break;
-                            case 3:
-                                JumpToLeasHistory();
-                                break;
-                        }
-                    }
-                });*/
 
             }else {
                  functionListItemView = (FunctionListItemView)convertView.getTag();
@@ -116,8 +99,6 @@ public class MyStopActivity extends ActionBarActivity {
 
             functionListItemView.imageView.setImageDrawable(drawable);
             functionListItemView.textView.setText(text);
-
-
 
             return convertView;
         }
@@ -134,7 +115,8 @@ public class MyStopActivity extends ActionBarActivity {
     }
 
     private void JumpToLeasHistory() {
-
+        Intent intent = new Intent(MyStopActivity.this, CheckMyStopLeaseHistory.class);
+        startActivity(intent);
     }
 
     private void InitFunctionItemList() {

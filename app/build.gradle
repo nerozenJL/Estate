@@ -19,9 +19,6 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:19.1.0'
-    compile 'com.google.code.gson:gson:2.3.1'
-    compile 'com.android.support:appcompat-v7:19.1.0'
     //compile 'com.android.support:appcompat-v7:19+'
     compile files('libs/alipaysdk.jar')
     compile files('libs/alipaysecsdk.jar')
@@ -37,4 +34,8 @@ dependencies {
     compile project(':Estate-volley')
     compile project(':myvolleyrequestlib')
     compile project(':casloginprocess')
+    compile project(':PinnedHeadListlibrary')
+    compile 'com.android.support:support-v4:19.1.0'
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.android.support:appcompat-v7:19.1.0'
 }

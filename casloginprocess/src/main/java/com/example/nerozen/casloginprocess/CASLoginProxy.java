@@ -30,7 +30,6 @@ public class CASLoginProxy {
     public static final String CAS_ERROR_BROADCAST_ACTION = "CAS_ERROR_BROADCAST_ACTION"; //登录过程中错误标识，比如网络异常，服务器异常
     public static final String CAS_SUCCESS_BROADCAST_ACTION = "CAS_BROADCAST_ACTION"; //登录各阶段的成功标识
 
-
     /** 数据传输的定义
      * 1.CAS_DATA_TRANSITION_BROADCAST_ACTION ：表明该广播是发送CAS数据的（已弃用）
      * 1.1.CAS_DATA_TRANSITION_HOSTSESSION_BRAODCAST_ACTION 传输hostsession
@@ -43,6 +42,10 @@ public class CASLoginProxy {
 
     public static final String CAS_DATA_TRANSITION_HOSTSESSION_BRAODCAST_ACTION = "CAS_DATA_TRANSITION_HOSTSESSION_BRAODCAST_ACTION";
     public static final String CAS_DATA_TRANSITION_HOSTINFO_MAP_BROADCAST_ACTION = "CAS_DATA_TRANSITION_HOSTINFO_MAP_ACTION";
+
+
+    public static final String INTEXTRA_TAG_NAME_SUCCESS = "successInfo";
+    public static final String INTEXTRA_TAG_NAME_ERROR = "errorInfo";
 
     public static final String EXTRA_KEY_DATA_TRANSITION_GARDEN_DB_MAP = "DB_NAME_MAP";
     public static final String EXTRA_KEY_DATA_TRANSITION_GADEN_HOST_MAP = "HOST_URL_MAP";
@@ -150,19 +153,26 @@ public class CASLoginProxy {
         };
     }
 
-    protected void DealWithCommonVolleyError(VolleyError error) {
+    protected boolean DealWithCommonVolleyError(VolleyError error) {
+        boolean isHttpStackError = false;
         if(BasicErrorListener.isNetworkProblem(error)) {
             //网络异常
             SendCASErrorBroadcast(CAS_REQUEST_ERROR_NETWORK_ERROR);
+            //isHttpStackError = false;
         }
         if(BasicErrorListener.isServerError(error)) {
-            //服务器异常
-            SendCASErrorBroadcast(CAS_REQUEST_ERROR_SERVER_EXCEPTION);
+            //服务器异常且不是重定向类型的错误
+            if(!RedirectErrorListener.isRedirectError(error.networkResponse.statusCode)){
+                SendCASErrorBroadcast(CAS_REQUEST_ERROR_SERVER_EXCEPTION);
+            }
+            isHttpStackError = true;
         }
         if(BasicErrorListener.isTimeoutError(error)) {
             //连接超时
             SendCASErrorBroadcast(CAS_REQUEST_ERROR_CONNECT_TIMEOUT);
+            //isHttpStackError = false;
         }
+        return isHttpStackError;
     }
 
     /**通用的volley重定向错误相应，除一般的错误相应外，还处理重定向的处理，根据重定向地址递归访问，直到正常相应。
@@ -192,7 +202,7 @@ public class CASLoginProxy {
     protected void SendCASErrorBroadcast(int errorInfo) {
         Intent intent = new Intent();
         intent.setAction(CAS_ERROR_BROADCAST_ACTION);
-        intent.putExtra("errorInfo", errorInfo);
+        intent.putExtra(INTEXTRA_TAG_NAME_ERROR, errorInfo);
         context.sendBroadcast(intent);
     }
 
@@ -200,7 +210,7 @@ public class CASLoginProxy {
     protected void SendPeriodicalSuccessBroadcast(int successInfo) {
         Intent intent = new Intent();
         intent.setAction(CAS_SUCCESS_BROADCAST_ACTION);
-        intent.putExtra("successInfo", successInfo);
+        intent.putExtra(INTEXTRA_TAG_NAME_SUCCESS, successInfo);
         context.sendBroadcast(intent);
     }
 
@@ -274,8 +284,9 @@ public class CASLoginProxy {
                     getHostRequestSuccessListener = InitGetHostSuccessListener();
                     getHostRequest = InitGetHostRequest(getHostRequestSuccessListener);
                     AddRequestToRequestManager(getHostRequest);
+                }else {
+                    SendCASErrorBroadcast(CAS_AUTHENTICATION_FAILED_USER_INFO_INVALID);
                 }
-                SendCASErrorBroadcast(CAS_AUTHENTICATION_FAILED_USER_INFO_INVALID);
             }
         };
     }
@@ -369,11 +380,14 @@ public class CASLoginProxy {
         activateHostSessionSuccessListener = InitactivateHostSessionSuccessListener();
         Map<String, String> header = new HashMap<>();
         header.put("Cookie", casLoginHeader.CASTGC);
-        getHostSessionRedirectListener = InitGetHostSessionRedirectListener(header,
-                activateHostSessionSuccessListener, InitSessionInjectionRedirectListener(activateHostSessionSuccessListener));
-        InitGetHostSessionRequest(activateHostUrl + "?dbname=" + paramaDBName,
-                                  activateHostSessionSuccessListener,
-                                  getHostSessionRedirectListener);
+        getHostSessionRedirectListener = InitGetHostSessionRedirectListener(
+                header, //报头，包含CASTGC
+                activateHostSessionSuccessListener, //最后成功的事件处理
+                InitSessionInjectionRedirectListener(activateHostSessionSuccessListener));//第二次重定向的处理
+
+        AddRequestToRequestManager(InitGetHostSessionRequest(activateHostUrl,
+                activateHostSessionSuccessListener,
+                getHostSessionRedirectListener));
     }
 
     /** 初始化获取主机SESSION的请求*/
@@ -394,6 +408,7 @@ public class CASLoginProxy {
                 Intent intent = new Intent();
                 intent.setAction(CAS_DATA_TRANSITION_HOSTSESSION_BRAODCAST_ACTION);
                 intent.putExtra(EXTRA_KEY_DATA_TRANSITION_HOST_SESSION, casLoginHeader.HostSession);
+                context.sendBroadcast(intent); //将园区SESSION传出去
             }
         };
     }
@@ -402,7 +417,7 @@ public class CASLoginProxy {
     protected RedirectErrorListener InitGetHostSessionRedirectListener(Map headers,
                                                                             Response.Listener<String> successListener,
                                                                             final RedirectErrorListener redirectErrorListener) {
-        return new RedirectErrorListener(headers, successListener, context.getApplicationContext()) {
+        return new RedirectErrorListener(null, successListener, context.getApplicationContext()) {
             @Override
             public void onErrorResponse(VolleyError error) {
                 DealWithCommonVolleyError(error);
@@ -415,12 +430,13 @@ public class CASLoginProxy {
                     String hostRawSession = error.networkResponse.headers.get("Set-Cookie");
                     casLoginHeader.HostSession = hostRawSession.substring(0, hostRawSession.indexOf(';'));
                     Map<String, String> headers = new HashMap<>();
-                    headers.put("Cookie", casLoginHeader.CASServerJsession + casLoginHeader.CASTGC);
+                    String CASjsession = casLoginHeader.CASServerJsession.substring(0, casLoginHeader.CASServerJsession.indexOf(';'));
+                    headers.put("Cookie", CASjsession + ";" + casLoginHeader.CASTGC);
                     if(redirectUrl == null || redirectUrl.equals("")) {
                         //SendCASErrorBroadcast(CAS_REQUEST_ERROR_SERVER_EXCEPTION);
                     }else {
                         /*再次发送请求*/
-                        StringRequest redirectRequest = MakeRedirectRequest(redirectErrorListener, headers);
+                        StringRequest redirectRequest = MakeRedirectRequest(redirectUrl, redirectErrorListener, headers);
                         AddRequestToRequestManager(redirectRequest);
                     }
                 }
@@ -438,19 +454,22 @@ public class CASLoginProxy {
         return new RedirectErrorListener(null, successListener, context.getApplicationContext()) {
             @Override
             public void onErrorResponse(VolleyError error) {
-                DealWithCommonVolleyError(error);
-                if(isRedirectError(error.networkResponse.statusCode)) {
-                    //不需要再从这个返回报头里获得数据
-                    Map<String, String> header = new HashMap<>();
-                    header.put("Cookie", casLoginHeader.HostSession);
-                    if(redirectUrl == null || redirectUrl.equals("")) {
-                        //SendCASErrorBroadcast(CAS_REQUEST_ERROR_SERVER_EXCEPTION);
-                    }else {
+                if(DealWithCommonVolleyError(error)) {
+                    if(isRedirectError(error.networkResponse.statusCode)) {
+                        //不需要再从这个返回报头里获得数据
+                        Map<String, String> header = new HashMap<>();
+                        header.put("Cookie", casLoginHeader.HostSession);
+                        redirectUrl = FetchRedirectUrl(error.networkResponse);
+                        if(redirectUrl == null || redirectUrl.equals("")) {
+                            //SendCASErrorBroadcast(CAS_REQUEST_ERROR_SERVER_EXCEPTION);
+                        }else {
                         /*再次发送请求*/
-                        StringRequest redirectActivateHostSessionRequest = MakeRedirectRequest(this, header);
-                        AddRequestToRequestManager(redirectActivateHostSessionRequest);
+                            StringRequest redirectActivateHostSessionRequest = MakeRedirectRequest(redirectUrl, this, header);
+                            AddRequestToRequestManager(redirectActivateHostSessionRequest);
+                        }
                     }
                 }
+
             }
         };
     }
@@ -472,4 +491,7 @@ public class CASLoginProxy {
         public String HostSession;
     }
 
+    public String TempgetCASTGC() {
+        return casLoginHeader.CASTGC;
+    }
 }

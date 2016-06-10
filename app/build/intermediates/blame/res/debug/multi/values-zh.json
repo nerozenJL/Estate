@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\values-zh\\values-zh.xml",
+        "outputFile": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\res\\merged\\debug\\values-zh\\values-zh.xml",
         "map": [
             {
                 "to": {
@@ -11,7 +11,7 @@
                     "endOffset": 111
                 },
                 "from": {
-                    "file": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\Estate\\library\\unspecified\\res\\values-zh\\values-zh.xml",
+                    "file": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\Estate\\library\\unspecified\\res\\values-zh\\values-zh.xml",
                     "position": {
                         "startLine": 2,
                         "startColumn": 4,
@@ -30,7 +30,7 @@
                     "endOffset": 178
                 },
                 "from": {
-                    "file": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\Estate\\library\\unspecified\\res\\values-zh\\values-zh.xml",
+                    "file": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\Estate\\library\\unspecified\\res\\values-zh\\values-zh.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
@@ -49,7 +49,7 @@
                     "endOffset": 243
                 },
                 "from": {
-                    "file": "G:\\git-cloned-projects\\Estate\\app\\build\\intermediates\\exploded-aar\\Estate\\library\\unspecified\\res\\values-zh\\values-zh.xml",
+                    "file": "D:\\AndroidProjects\\Estate\\Estate\\app\\build\\intermediates\\exploded-aar\\Estate\\library\\unspecified\\res\\values-zh\\values-zh.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,

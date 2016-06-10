@@ -48,6 +48,7 @@ import com.uestc.service.BluetoothControler;
 import com.uestc.service.ShakeSensorService;
 import com.uestc.service.WifiUnlocker;
 import com.uestc.ui.dialog.DepartmentSwicherDialog;
+import com.uestc.ui.dialog.ListViewDialog;
 import com.uestc.ui.fragment.HighVersionFragment;
 import com.uestc.ui.fragment.LowVersionFragment;
 import com.uestc.constant.Host;
@@ -179,7 +180,6 @@ public class HomeActivity extends Activity {
 			@Override
 			public void onCheckedChanged(RadioGroup arg0, int arg1) {
 				switch (arg1) {
-
 					case R.id.rb_store_homeactivity:
 						homeLinearLayout.setVisibility(View.INVISIBLE);
 						getFragmentManager().beginTransaction().show(storeWebViewFragment).commit();
@@ -197,11 +197,16 @@ public class HomeActivity extends Activity {
 						switchrecord=1;
 						break;
 					case R.id.rb_switch_homeactivity:
-						DepartmentSwicherDialog.Builder builder=new DepartmentSwicherDialog.Builder(HomeActivity.this);
+						final ListViewDialog.Builder builder=new ListViewDialog.Builder(HomeActivity.this);
+						builder.setListItemName(Session.gardenHostMap);
 						builder.setOnConfirmButtonClickListner(new DialogInterface.OnClickListener() {
 							@Override
 							public void onClick(DialogInterface dialog, int which) {
 								//builder.
+								String key = builder.getKey();
+								String hostUrl = (String)Session.gardenHostMap.get(key);
+								String dbName = (String)Session.gardenDBNameMap.get(key);
+								Host.DynamiclySetAPIs(hostUrl, dbName);
 								dialog.dismiss();
 								switchRadioButton.setTextColor(getResources().getColor(R.color.rb_unpressed));
 								if (switchrecord==1){
@@ -213,7 +218,7 @@ public class HomeActivity extends Activity {
 								}
 							}
 						});
-						builder.setOnBackPressedListener(new DepartmentSwicherDialog.OnBackPressedListener() {
+						builder.setOnBackPressedListener(new ListViewDialog.OnBackPressedListener() {
 							@Override
 							public void onClick() {
 								switchRadioButton.setTextColor(getResources().getColor(R.color.rb_unpressed));
@@ -230,7 +235,7 @@ public class HomeActivity extends Activity {
 						homeRadioButton.setTextColor(getResources().getColor(R.color.rb_unpressed));
 						meRadioButton.setTextColor(getResources().getColor(R.color.rb_unpressed));
 						switchRadioButton.setTextColor(getResources().getColor(R.color.style));
-						builder.create().show();
+						builder.create(0).show();
 						break;
 					case R.id.rb_home_homeactivity: {
 						//new HanderAsyncTask().execute();

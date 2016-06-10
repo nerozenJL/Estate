@@ -203,7 +203,7 @@
 
         <activity android:name=".MyStopActivity" />
 
-        <!--查看历史纪录Activity，我使用了toolbar的实现方式.第一次使用，可能会留坑，见谅~~ By Nero-->
+
         <activity
             android:name=".CheckMyStopLeaseHistory"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar"/>

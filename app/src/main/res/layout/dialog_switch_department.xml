@@ -13,6 +13,7 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/textView_title_switchdepartment"
             android:layout_width="match_parent"
             android:layout_height="70dp"
             android:gravity="center"

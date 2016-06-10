@@ -8,112 +8,80 @@
     android:orientation="vertical"
     tools:context=".CheckMyStopLeaseHistory">
 
-    <!--顶部导航栏-->
     <LinearLayout
-        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
-        android:orientation="horizontal"
-        android:background="@color/my_stop_theme_orange">
-
-        <!--返回按钮-->
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:background="#00000000">
-
-            <ImageButton
-                android:id="@+id/back_from_my_lease_history"
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/back_from_my_stops"/>
-
-        </LinearLayout>
-
-        <!--标题-->
-        <TextView
-            android:paddingTop="5dp"
-            android:layout_width="0dp"
-            android:layout_weight="8"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
-            android:textColor="@color/write"
-            android:textSize="20sp"
-            android:text="车位租用记录"/>
-
-        <!--对称布局块，为了让标题居中的冗余布局-->
-        <LinearLayout
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:background="#00000000">
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <!--顶部的可选条-->
-    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="@color/my_stop_theme_orange"
-        android:orientation="horizontal">
+        android:id="@+id/my_stop_top_linearlayout"
+        android:orientation="vertical"
+        android:background="#f2845b">
 
-        <!--订单详情选项卡-->
+        <!--顶部导航栏-->
         <LinearLayout
-            android:id="@+id/check_lease_order_tab_layout"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_weight="1"
-            android:paddingLeft="40dp"
-            android:paddingRight="20dp">
+            android:id="@+id/my_stop_navigate_bar"
+            android:orientation="horizontal">
 
-            <TextView
-                android:paddingTop="10dp"
+            <!--返回按钮-->
+            <LinearLayout
+                android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_gravity="bottom"
-                android:textSize="16sp"
-                android:textColor="@color/write"
-                android:text="订单详情"/>
+                android:background="#00000000">
 
-        </LinearLayout>
+                <ImageButton
+                    android:id="@+id/back_from_check_lease_history"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back_from_my_stops"/>
 
-        <!--收益详情选项卡-->
-        <LinearLayout
-            android:id="@+id/check_lease_income_tab_layout"
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:layout_gravity="center"
-            android:paddingLeft="40dp"
-            android:paddingRight="2dp">
+            </LinearLayout>
 
+            <!--标题-->
             <TextView
-                android:paddingTop="10dp"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_gravity="center_horizontal|bottom"
-                android:textSize="16sp"
-                android:textColor="@color/write"
-                android:text="收益一览"/>
+                android:layout_weight="8"
+                android:gravity="center"
+                android:id="@+id/my_stop_title"
+                android:textColor="@color/white2"
+                android:textSize="20sp"
+                android:text="租用详情"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            </LinearLayout>
+
 
         </LinearLayout>
-
     </LinearLayout>
 
-    <!--和选项卡联动的viewpager-->
-    <android.support.v4.view.ViewPager
-        android:id="@+id/top_tab_viewpagers_lease_history"
-        android:layout_width="match_parent"
+    <android.support.v4.app.FragmentTabHost
+        android:id="@+id/fragment_tabhost_check_stop_lease_history"
         android:layout_height="0dp"
-        android:layout_weight="10">
-    </android.support.v4.view.ViewPager>
+        android:layout_weight="8"
+        android:layout_width="match_parent"
+        android:background="@color/write">
+
+        <TabWidget
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+    </android.support.v4.app.FragmentTabHost>
+
+    <FrameLayout
+        android:id="@+id/realtabcontent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/write">
+    </FrameLayout>
 
 </LinearLayout>
 <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -133,3 +101,118 @@
     </android.support.v7.widget.Toolbar>
 
 </RelativeLayout>-->
+
+    <!-- &lt;!&ndash;顶部导航栏&ndash;&gt;
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="horizontal"
+            android:background="@color/my_stop_theme_orange">
+
+            &lt;!&ndash;返回按钮&ndash;&gt;
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#00000000">
+
+                <ImageButton
+                    android:id="@+id/back_from_my_lease_history"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/back_from_my_stops"/>
+
+            </LinearLayout>
+
+            &lt;!&ndash;标题&ndash;&gt;
+            <TextView
+                android:paddingTop="5dp"
+                android:layout_width="0dp"
+                android:layout_weight="8"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:textColor="@color/write"
+                android:textSize="20sp"
+                android:text="车位租用记录"/>
+
+            &lt;!&ndash;对称布局块，为了让标题居中的冗余布局&ndash;&gt;
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="#00000000">
+            </LinearLayout>
+
+        </LinearLayout>
+
+        &lt;!&ndash;顶部的可选条&ndash;&gt;
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/my_stop_theme_orange"
+            android:orientation="horizontal">
+
+            &lt;!&ndash;订单详情选项卡&ndash;&gt;
+            <TextView
+                android:id="@+id/tv_check_lease_order_detail"
+                android:paddingTop="10dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|bottom"
+                android:textSize="16sp"
+                android:textColor="@color/write"
+                android:text="订单详情"
+                android:clickable="true"/>
+
+            &lt;!&ndash;收益详情选项卡&ndash;&gt;
+            <TextView
+                android:id="@+id/tv_check_lease_income_detail"
+                android:paddingTop="10dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_horizontal|bottom"
+                android:textSize="16sp"
+                android:textColor="@color/write"
+                android:clickable="true"
+                android:text="收益一览"/>-->
+
+
+    <!-- <LinearLayout
+         android:id="@+id/check_lease_order_tab_layout"
+         android:layout_width="0dp"
+         android:layout_height="match_parent"
+         android:layout_gravity="bottom"
+         android:orientation="horizontal"
+         android:layout_weight="1"
+         android:paddingLeft="40dp"
+         android:paddingRight="20dp">
+     </LinearLayout>-->
+
+
+    <!-- <LinearLayout
+         android:id="@+id/check_lease_income_tab_layout"
+         android:layout_width="0dp"
+         android:layout_height="match_parent"
+         android:layout_weight="1"
+         android:layout_gravity="center"
+         android:paddingLeft="40dp"
+         android:paddingRight="2dp">
+     </LinearLayout>-->
+
+    <!--</LinearLayout>-->
+    <!--<ImageView
+        android:layout_width="match_parent"
+        android:layout_height="5dp" />-->
+
+    <!--和选项卡联动的viewpager-->
+<!--<android.support.v4.view.ViewPager
+android:id="@+id/top_tab_viewpagers_lease_history"
+android:layout_width="match_parent"
+android:layout_height="0dp"
+android:layout_weight="10">
+</android.support.v4.view.ViewPager>-->

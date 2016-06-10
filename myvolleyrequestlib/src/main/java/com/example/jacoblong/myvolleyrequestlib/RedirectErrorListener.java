@@ -75,7 +75,12 @@ public class RedirectErrorListener extends BasicErrorListener {
         return redirectRequest;
     }
 
-    protected boolean isRedirectError(int state) {
+    protected BasicRequest MakeRedirectRequest(String redirectUrl, RedirectErrorListener otherRedirectListener, Map ohterMap) {
+        BasicRequest redirectRequest = new BasicRequest(Request.Method.GET, redirectUrl, successListener, otherRedirectListener, ohterMap);
+        return redirectRequest;
+    }
+
+    public static boolean isRedirectError(int state) {
         boolean isRedirect = false;
         switch(state) {
             case HttpURLConnection.HTTP_MOVED_PERM:

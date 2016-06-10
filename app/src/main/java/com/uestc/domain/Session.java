@@ -1,7 +1,9 @@
 package com.uestc.domain;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 
@@ -75,5 +77,7 @@ public class Session {
 		accessableBlueToothSsidList.add(newMember);
 	}
 
-
+	/*20160602 园区与主机名，数据库名称的映射*/
+	public static Map gardenHostMap = new HashMap();
+	public static Map gardenDBNameMap = new HashMap();
 }

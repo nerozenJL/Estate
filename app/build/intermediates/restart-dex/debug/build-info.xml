@@ -4,34 +4,29 @@
     api-level="21"
     density="xxhdpi"
     format="7"
-    timestamp="1174734935225427" >
+    timestamp="657308081911" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="8655" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="137" />
     <task
         name="verifier"
-        duration="0" />
+        duration="68" />
 
     <artifact
-        location="G:\git-cloned-projects\Estate\app\build\intermediates\res\resources-debug.ap_"
-        type="RESOURCES" />
+        location="D:\AndroidProjects\Estate\Estate\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
-    <build timestamp="1173840017081574" >
+    <build timestamp="25642222688551" >
         <artifact
-            location="G:\git-cloned-projects\Estate\app\build\outputs\apk\app-debug.apk"
+            location="D:\AndroidProjects\Estate\Estate\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build timestamp="1174734935225427" >
-        <artifact
-            location="G:\git-cloned-projects\Estate\app\build\intermediates\res\resources-debug.ap_"
-            type="RESOURCES" />
     </build>
 
 </instant-run>

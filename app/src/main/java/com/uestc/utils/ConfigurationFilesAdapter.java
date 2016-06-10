@@ -48,6 +48,10 @@ public class ConfigurationFilesAdapter {
         return updateResult;
     }
 
+    public String ReadPropertyByFileNameAndKey() {
+        return null;
+    }
+
     public boolean ReadPropertyByConfigKey(String configKey){
         return true;
     }
